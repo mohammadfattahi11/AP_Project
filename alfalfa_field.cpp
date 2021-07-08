@@ -1,6 +1,6 @@
 #include "alfalfa_field.h"
 #include "ui_alfalfa_field.h"
-
+//hello
 alfalfa_field::alfalfa_field(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::alfalfa_field)
