@@ -11,7 +11,7 @@ CONFIG += c++11
 SOURCES += \
     alfalfa_field.cpp \
     barn.cpp \
-    checken_coop.cpp \
+    chicken_coop.cpp \
     cow_pasture.cpp \
     farm.cpp \
     main.cpp \
@@ -26,7 +26,7 @@ SOURCES += \
 HEADERS += \
     alfalfa_field.h \
     barn.h \
-    checken_coop.h \
+    chicken_coop.h \
     cow_pasture.h \
     farm.h \
     game.h \
@@ -40,7 +40,7 @@ HEADERS += \
 FORMS += \
     alfalfa_field.ui \
     barn.ui \
-    checken_coop.ui \
+    chicken_coop.ui \
     cow_pasture.ui \
     farm.ui \
     game.ui \
