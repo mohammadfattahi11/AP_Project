@@ -19,7 +19,7 @@ class farm : public QDialog
     Q_OBJECT
 
 public:
-    farm(QWidget *parent = nullptr);
+    explicit farm(QWidget *parent = nullptr);
     farm(const farm&);
     void operator=(const farm&);
     ~farm();

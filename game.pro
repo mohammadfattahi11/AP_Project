@@ -63,3 +63,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     game_recources.qrc \
     image.qrc
+
+DISTFILES += \
+    file.json

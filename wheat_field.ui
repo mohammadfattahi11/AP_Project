@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>wheat_field</class>
  <widget class="QDialog" name="wheat_field">
@@ -5,14 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>605</width>
+    <height>393</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>wheat field</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="game_recources.qrc">
+    <normaloff>:/game_backgrounds/pics_project/wheat_icon.jfif</normaloff>:/game_backgrounds/pics_project/wheat_icon.jfif</iconset>
   </property>
  </widget>
- <resources/>
+ <resources>
+  <include location="game_recources.qrc"/>
+ </resources>
  <connections/>
 </ui>
