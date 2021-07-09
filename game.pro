@@ -14,6 +14,7 @@ SOURCES += \
     checken_coop.cpp \
     cow_pasture.cpp \
     farm.cpp \
+    login.cpp \
     main.cpp \
     game.cpp \
     milk.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     cow_pasture.h \
     farm.h \
     game.h \
+    login.h \
     milk.h \
     place.h \
     register_info.h \
@@ -44,6 +46,7 @@ FORMS += \
     cow_pasture.ui \
     farm.ui \
     game.ui \
+    login.ui \
     milk.ui \
     place.ui \
     register_info.ui \
@@ -55,3 +58,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    image.qrc
