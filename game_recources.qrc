@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/game_backgrounds">
+        <file>pics_project/138manfarmer2_100718.png</file>
+        <file>pics_project/139womanfarmer1_100885 (1).png</file>
+        <file>pics_project/anbar.png</file>
+        <file>pics_project/cow.png</file>
+        <file>pics_project/farm_barn_icon_153817.png</file>
+        <file>pics_project/gandom.png</file>
+        <file>pics_project/hen.png</file>
+        <file>pics_project/joe.png</file>
+        <file>pics_project/pngwing.com.png</file>
+        <file>pics_project/sheep.png</file>
+        <file>pics_project/background-scene-with-green-field_1308-8895 (1).jpg</file>
+        <file>pics_project/silo.png</file>
+        <file>pics_project/favpng_grocery-store-shopping-clip-art.png</file>
+        <file>pics_project/favpng_common-wheat-cereal-ear-illustration.png</file>
+        <file>pics_project/favpng_vaisakhi.png</file>
+        <file>pics_project/clipart244133.png</file>
+    </qresource>
+</RCC>
