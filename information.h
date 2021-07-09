@@ -8,7 +8,7 @@
 #include <QVector>
 
 static QJsonObject read_info(){
-    QFile file_info("C:/Users/zeroone/Desktop/file.json");
+    QFile file_info(":/new/prefix2/file.json");
     file_info.open(QIODevice::ReadOnly);
     QByteArray byte = file_info.readAll();
     QJsonDocument doc = QJsonDocument::fromJson(byte);
@@ -18,7 +18,7 @@ static QJsonObject read_info(){
 
 static void write_info(QJsonObject j){
     QJsonDocument doc(j);
-    QFile file_info("C:/Users/zeroone/Desktop/file.json");
+    QFile file_info(":/new/prefix2/file.json");
     file_info.open(QIODevice::WriteOnly);
     file_info.write(doc.toJson());
 }

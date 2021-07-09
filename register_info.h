@@ -29,6 +29,9 @@ public:
     void set_Email(QString );
     void set_Gender(QString );
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
 
     Ui::register_info *ui;
