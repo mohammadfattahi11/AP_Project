@@ -7,8 +7,8 @@ sheep_pasture::sheep_pasture(QWidget *parent) :
 {
     ui->setupUi(this);
 }
-sheep_pasture::sheep_pasture(const sheep_pasture& _sheep_pasture){}
-void sheep_pasture::operator=(const sheep_pasture& _sheep_pasture){}
+//sheep_pasture::sheep_pasture(const sheep_pasture& _sheep_pasture){}
+//void sheep_pasture::operator=(const sheep_pasture& _sheep_pasture){}
 sheep_pasture::~sheep_pasture()
 {
     delete ui;

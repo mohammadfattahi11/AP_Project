@@ -15,17 +15,17 @@ class cow_pasture : public QDialog
 
 public:
     explicit cow_pasture(QWidget *parent = nullptr);
-    cow_pasture(const cow_pasture&);
-    void operator=(const cow_pasture&);
+//    cow_pasture(const cow_pasture&);
+//    void operator=(const cow_pasture&);
     ~cow_pasture();
 
-    milk get_milk();
-    void set_milk(milk );
+//    milk get_milk();
+//    void set_milk(milk );
 
 private:
 
     Ui::cow_pasture *ui;
-    milk Milk;
+//    milk Milk;
 
 };
 
