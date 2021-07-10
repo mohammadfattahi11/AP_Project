@@ -20,9 +20,16 @@ public:
     int get_unlock_level();
     int get_area();
     int get_level();
+    int get_cultivated_area();
+    bool get_status();
+    double get_seed_time();
+    //////
     void set_unlock_level(int );
     void set_level(int );
     void set_area(int );
+    void set_cultivated_area(int );
+    void set_status(bool );
+    void set_seed_time(double );
 
 private:
 
@@ -30,6 +37,9 @@ private:
     int Unlock_level;
     int Area;
     int Level;
+    int cultivated_area;
+    bool in_use;
+    double seed_time;
 
 };
 

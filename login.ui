@@ -155,6 +155,9 @@ border-bottom-right-radius:5px;
 font: 12pt &quot;MS Shell Dlg 2&quot;;
 color:rgb(255, 255, 255);</string>
    </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
    <property name="placeholderText">
     <string>is empty</string>
    </property>
@@ -249,33 +252,6 @@ color: rgb(85, 3, 81);
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>370</y>
-     <width>341</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="acceptDrops">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(50, 50, 50);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-color:rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>there is no any account with these username and password</string>
-   </property>
-   <property name="scaledContents">
-    <bool>false</bool>
-   </property>
-  </widget>
   <zorder>label_6</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
@@ -286,7 +262,6 @@ color:rgb(255, 255, 255);</string>
   <zorder>pushButton</zorder>
   <zorder>pushButton_2</zorder>
   <zorder>label_5</zorder>
-  <zorder>label_7</zorder>
  </widget>
  <resources>
   <include location="image.qrc"/>
