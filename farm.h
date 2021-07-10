@@ -11,6 +11,7 @@
 #include "sheep_pasture.h"
 #include "wheat_field.h"
 #include "alfalfa_field.h"
+#include "store.h"
 
 namespace Ui {class farm;}
 
@@ -42,6 +43,20 @@ public:
 
 private slots:
     void on_pushButton_8_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_10_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_9_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
 

@@ -40,3 +40,46 @@ void farm::on_pushButton_8_clicked()
     Wheat_Field.show();
 }
 
+
+void farm::on_pushButton_3_clicked()
+{
+    Chicken_Coop.show();
+}
+
+
+void farm::on_pushButton_5_clicked()
+{
+    Sheep_Pasture.show();
+}
+
+
+void farm::on_pushButton_4_clicked()
+{
+    Cow_Pasture.show();
+}
+
+
+void farm::on_pushButton_10_clicked()
+{
+    Silo.show();
+}
+
+
+void farm::on_pushButton_7_clicked()
+{
+    Barn.show();
+}
+
+
+void farm::on_pushButton_9_clicked()
+{
+    Alfalfa_Field.show();
+}
+
+
+void farm::on_pushButton_2_clicked()
+{
+    store *Store=new store;
+    Store->show();
+}
+

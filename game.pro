@@ -22,6 +22,7 @@ SOURCES += \
     register_info.cpp \
     sheep_pasture.cpp \
     silo.cpp \
+    store.cpp \
     wheat_field.cpp
 
 HEADERS += \
@@ -38,6 +39,7 @@ HEADERS += \
     register_info.h \
     sheep_pasture.h \
     silo.h \
+    store.h \
     wheat_field.h
 
 FORMS += \
@@ -53,6 +55,7 @@ FORMS += \
     register_info.ui \
     sheep_pasture.ui \
     silo.ui \
+    store.ui \
     wheat_field.ui
 
 # Default rules for deployment.
