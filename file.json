@@ -62,10 +62,12 @@
             "alfalfa_seed_time": 0,
             "barn_level": 1,
             "chicken_count": 0,
+            "chicken_feed_time": -1,
             "chicken_level": 0,
             "coin": 20,
             "cow_count": 0,
             "cow_level": 0,
+            "eggs_count": 0,
             "email": "6",
             "exp": 0,
             "fleece_count": 0,
@@ -82,7 +84,7 @@
             "username": "6",
             "wheat_count": 1,
             "wheat_cultivated_area": 0,
-            "wheat_in_use": false,
+            "wheat_in_use": true,
             "wheat_level": 1,
             "wheat_seed_time": 0
         }

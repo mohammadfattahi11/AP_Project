@@ -38,7 +38,11 @@ farm::~farm()
 
 void farm::on_pushButton_8_clicked()
 {
-    wheat_field* wheatField = new wheat_field(nullptr, id);
+    wheat_field* wheatField = new wheat_field(this, id);
     wheatField->show();
 }
-
+void farm::on_pushButton_3_clicked()
+{
+    chicken_coop * _chicken_coop = new chicken_coop(this , id);
+    _chicken_coop->show();
+}

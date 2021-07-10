@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>wheat_field</class>
  <widget class="QDialog" name="wheat_field">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -32,20 +35,28 @@
    <property name="styleSheet">
     <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgb(255, 85, 0);
-border-top-left-radius:10px; 
-border-bottom-right-radius:10px;
-border-top-right-radius:10px; 
-border-bottom-left-radius:10px;
 background-image: url(:/game_backgrounds/pics_project/clipart244133.png);</string>
    </property>
    <property name="value">
     <number>0</number>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>true</bool>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+   <property name="format">
+    <string>%p%</string>
+   </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>130</x>
      <y>80</y>
      <width>81</width>
      <height>31</height>
@@ -64,7 +75,7 @@ background-color: rgb(255, 255, 0);</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>140</x>
      <y>40</y>
      <width>71</width>
      <height>31</height>
@@ -83,14 +94,15 @@ background-color: rgb(255, 255, 0);</string>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>210</x>
      <y>40</y>
-     <width>31</width>
+     <width>21</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-image: url(:/game_backgrounds/pics_project/clipart244133.png);
+font: 11pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgb(255, 255, 0);</string>
    </property>
    <property name="text">
@@ -100,14 +112,15 @@ background-color: rgb(255, 255, 0);</string>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>210</x>
      <y>80</y>
-     <width>31</width>
+     <width>21</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-image: url(:/game_backgrounds/pics_project/clipart244133.png);
+font: 11pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgb(255, 255, 0);</string>
    </property>
    <property name="text">
@@ -145,31 +158,32 @@ border-bottom-left-radius:20px;</string>
     <rect>
      <x>90</x>
      <y>130</y>
-     <width>151</width>
+     <width>161</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(0, 0, 255);
-font: 12pt &quot;MS Shell Dlg 2&quot;;
+font: 14pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgb(255, 255, 0);
 background-image: url(:/game_backgrounds/pics_project/clipart244133.png);</string>
    </property>
    <property name="text">
-    <string>Cultivated area = </string>
+    <string>Cultivated area =</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>250</x>
      <y>130</y>
-     <width>31</width>
+     <width>21</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-image: url(:/game_backgrounds/pics_project/clipart244133.png);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgb(255, 255, 0);</string>
    </property>
    <property name="text">
@@ -212,13 +226,27 @@ border-bottom-left-radius:20px;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-top-left-radius:10px; 
-font: 14pt &quot;MS Shell Dlg 2&quot;;
-border-bottom-right-radius:10px;
-border-top-right-radius:10px; 
-border-bottom-left-radius:10px;
+    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgb(255, 85, 0);
 background-image: url(:/game_backgrounds/pics_project/clipart244133.png);</string>
+   </property>
+   <property name="wrapping">
+    <bool>false</bool>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="stepType">
+    <enum>QAbstractSpinBox::DefaultStepType</enum>
+   </property>
+   <property name="displayIntegerBase">
+    <number>10</number>
    </property>
   </widget>
  </widget>

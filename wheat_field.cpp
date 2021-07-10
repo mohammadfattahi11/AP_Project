@@ -14,11 +14,14 @@ wheat_field::wheat_field(QWidget *parent, int _id) :
     QJsonArray jarr = jobj["User"].toArray();
     QJsonObject obj = jarr[_id].toObject();
 
-    int _area = 5 * pow(2, obj["wheat_level"].toInt() - 1);
+    if(obj["wheat_in_use"].toBool()){
+        ui->pushButton_2->setEnabled(false);
+    }
 
-    ui->label_3->setText(QString::number(_area));
-    ui->label_4->setText(obj["wheat_level"].toString());
-    ui->label_6->setText(obj["wheat_cultivated_area"].toString());
+    ui->spinBox->setMaximum(5 * pow(2, obj["wheat_level"].toInt() - 1));
+    ui->label_3->setText(QString::number(5 * pow(2, obj["wheat_level"].toInt() - 1)));
+    ui->label_4->setText(QString::number(obj["wheat_level"].toInt()));
+    ui->label_6->setText(QString::number(obj["wheat_cultivated_area"].toInt()));
 }
 //wheat_field::wheat_field(const wheat_field& _wheat_field){
 //    Area = _wheat_field.Area;
