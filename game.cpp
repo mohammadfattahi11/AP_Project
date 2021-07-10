@@ -1,12 +1,13 @@
 #include "game.h"
 #include "ui_game.h"
 
-game::game(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::game)
+game::game(QWidget *parent) :
+    QWidget(parent) ,
+    ui(new Ui::game)
 {
-   //  ui->setupUi(this);
+     //ui->setupUi(this);
 }
+
 //////
 //register_info game::get_information(){return information;}
 //farm game::get_farm(){return Farm;}

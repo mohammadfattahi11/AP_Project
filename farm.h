@@ -2,8 +2,8 @@
 
 #ifndef FARM_H
 #define FARM_H
-
 #include <QDialog>
+#include "game.h"
 #include "barn.h"
 #include "silo.h"
 #include "chicken_coop.h"
@@ -11,6 +11,7 @@
 #include "sheep_pasture.h"
 #include "wheat_field.h"
 #include "alfalfa_field.h"
+#include "store.h"
 
 namespace Ui {class farm;}
 
@@ -42,7 +43,39 @@ public:
 
 private slots:
     void on_pushButton_8_clicked();
+
     void on_pushButton_3_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_10_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_9_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_sheep_pushButton_clicked();
+
+    void on_store_pushButton_clicked();
+
+    void on_chicken_pushButton_clicked();
+
+    void on_wheat_pushButton_clicked();
+
+    void on_barn_pushButton_clicked();
+
+    void on_cow_pushButton_clicked();
+
+    void on_silo_pushButton_clicked();
+
+    void on_alfalfa_pushButton_clicked();
+
+    void on_profile_pushButton_clicked();
+
 private:
 
     Ui::farm *ui;
