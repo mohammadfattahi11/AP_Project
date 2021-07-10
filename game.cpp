@@ -5,7 +5,7 @@ game::game(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::game)
 {
-    ui->setupUi(this);
+   //  ui->setupUi(this);
 }
 //////
 register_info game::get_information(){return information;}
@@ -25,4 +25,7 @@ game::~game()
 {
     delete ui;
 }
+
+
+
 

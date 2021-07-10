@@ -2,7 +2,8 @@
 #include "ui_login.h"
 #include<QLabel>
 #include"information.h"
-#include"game.h"
+#include"farm.h"
+#include "game.h"
 login::login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::login)
@@ -30,8 +31,8 @@ QJsonObject _info=read_info();
   for(int counter=0;counter<info.size();counter++){
      if( (info[counter].toObject())["username"]==ui->lineEdit->text()&&(info[counter].toObject())["password"]==ui->lineEdit_2->text()){
     this->close();
-     game w;
-     w.show();
+     farm *w=new farm;
+     w->show();
    }
 ui->label_7->setText("there is no any account with these username and password");
 if(ui->label_7->isHidden()){

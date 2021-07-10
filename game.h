@@ -31,6 +31,8 @@ public:
     void set_xp(int );
     void set_coin(int );
 
+
+
 private:
 
     Ui::game *ui;
