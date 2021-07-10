@@ -77,6 +77,7 @@ void register_info::on_pushButton_clicked()
                 obj["username"]=ui->lineEdit_2->text();
                 obj["password"]=ui->lineEdit_3->text();
                 obj["email"]=ui->lineEdit_5->text();
+                obj["gender"]=ui->comboBox->currentText();
                 obj["level"]=1;
                 obj["coin"]=20;
                 obj["cow_count"]=0;
@@ -106,3 +107,11 @@ void register_info::on_pushButton_clicked()
         }
     }
 }
+
+void register_info::on_pushButton_2_clicked()
+{
+    login *_login=new login;
+    _login->show();
+    this->close();
+}
+
