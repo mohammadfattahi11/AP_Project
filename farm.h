@@ -12,6 +12,7 @@
 #include "wheat_field.h"
 #include "alfalfa_field.h"
 #include "store.h"
+#include <QMessageBox>
 
 namespace Ui {class farm;}
 

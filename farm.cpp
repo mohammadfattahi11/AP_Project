@@ -46,7 +46,7 @@ void farm::on_sheep_pushButton_clicked()
 
 void farm::on_store_pushButton_clicked()
 {
-    store *Store=new store(this);
+    store *Store=new store(this,id);
     Store->show();
 }
 

@@ -17,7 +17,6 @@
         <file>pics_project/favpng_vaisakhi.png</file>
         <file>pics_project/clipart244133.png</file>
         <file>pics_project/Tea_plant.png</file>
-
         <file>pics_project/qqqq.jpg</file>
         <file>pics_project/sun.png</file>
         <file>pics_project/egg.png</file>
@@ -30,11 +29,11 @@
         <file>pics_project/store_wheat.png</file>
         <file>pics_project/wool.png</file>
         <file>pics_project/nail.png</file>
-
         <file>pics_project/login_background_2.jpg</file>
         <file>pics_project/qqqq.jpg</file>
         <file>pics_project/alfalfa_icon.jpg</file>
         <file>pics_project/images.jfif</file>
         <file>pics_project/wheat_icon.jfif</file>
+        <file>pics_project/coin.png</file>
     </qresource>
 </RCC>
