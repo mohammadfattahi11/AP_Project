@@ -107,6 +107,7 @@ void register_info::on_pushButton_clicked()
                 obj["wheat_cultivated_area"] = 0;
                 obj["wheat_in_use"] = false;
                 obj["wheat_seed_time"] = 0;
+                obj["wheat_upgrade_time"] = -1;
 
                 obj["alfalfa_level"]=1;
                 obj["alfalfa_count"]=1;
@@ -115,8 +116,7 @@ void register_info::on_pushButton_clicked()
                 obj["alfalfa_seed_time"] = 0;
                 obj["alfalfa_plow_time"] = 0;
                 obj["alfalfa_is_plow"] = false;
-
-
+                obj["alfalfa_upgrade_time"] = -1;
 
                 info.push_back(QJsonValue(obj));
                 _info["User"]=info;

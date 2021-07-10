@@ -12,7 +12,7 @@ class wheat_field : public QDialog
     Q_OBJECT
 
 public:
-    explicit wheat_field(QWidget *parent = nullptr, int _id = 0);
+    explicit wheat_field(QWidget *parent = nullptr, int = 0);
 //    wheat_field(const wheat_field&);
 //    void operator=(const wheat_field&);
     ~wheat_field();
@@ -29,9 +29,17 @@ public:
 //    void set_status(bool );
 //    void set_seed_time(double );
 
+private slots:
+    void on_upgrade_clicked();
+
+    void on_seed_clicked();
+
+    void on_Harvesting_clicked();
+
 private:
 
     Ui::wheat_field *ui;
+    int id ;
 //    int Area;
 //    int Level;
 //    int cultivated_area;

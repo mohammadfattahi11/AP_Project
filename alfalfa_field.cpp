@@ -1,11 +1,12 @@
 #include "alfalfa_field.h"
 #include "ui_alfalfa_field.h"
 //hello
-alfalfa_field::alfalfa_field(QWidget *parent) :
+alfalfa_field::alfalfa_field(QWidget *parent, int _id):
     QDialog(parent),
     ui(new Ui::alfalfa_field)
 {
     ui->setupUi(this);
+    id = _id;
 }
 //alfalfa_field::alfalfa_field(const alfalfa_field& _alfalfa_field){
 //    Unlock_level =  _alfalfa_field.Unlock_level;

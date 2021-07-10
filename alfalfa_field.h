@@ -12,7 +12,7 @@ class alfalfa_field : public QDialog
     Q_OBJECT
 
 public:
-    explicit alfalfa_field(QWidget *parent = nullptr);
+    explicit alfalfa_field(QWidget *parent = nullptr, int = 0);
 //    alfalfa_field(const alfalfa_field&);
 //    void operator=(const alfalfa_field&);
     ~alfalfa_field();
@@ -34,6 +34,7 @@ public:
 private:
 
     Ui::alfalfa_field *ui;
+    int id;
 //    int Unlock_level;
 //    int Area;
 //    int Level;
