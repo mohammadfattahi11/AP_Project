@@ -99,8 +99,18 @@ font: 25pt &quot;MS Shell Dlg 2&quot;;</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 0, 4);
 background-color:rgb(59, 59, 59);
 border-radius: 5px; 
 color:rgb(255, 255, 255);</string>

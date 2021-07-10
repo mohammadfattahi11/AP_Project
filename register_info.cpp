@@ -53,7 +53,7 @@ void register_info::on_pushButton_clicked()
     QJsonObject _info=read_info();
     QJsonArray info = _info["User"].toArray();
     if(ui->lineEdit->text().isEmpty()||ui->lineEdit_2->text().isEmpty()||ui->lineEdit_3->text().isEmpty()||ui->lineEdit_4->text().isEmpty()||ui->lineEdit_5->text().isEmpty())
-     QMessageBox::warning(this ," " , "one or more line is empty");
+        QMessageBox::warning(this ," " , "one or more line is empty");
 
     else{
         bool usernumber=0;

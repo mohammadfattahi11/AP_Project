@@ -34,3 +34,9 @@ farm::~farm()
 {
     delete ui;
 }
+
+void farm::on_pushButton_8_clicked()
+{
+    Wheat_Field.show();
+}
+
