@@ -40,6 +40,9 @@ public:
     void set_wheat_field(wheat_field );
     void set_alfalfa_field(alfalfa_field );
 
+private slots:
+    void on_pushButton_8_clicked();
+
 private:
 
     Ui::farm *ui;
