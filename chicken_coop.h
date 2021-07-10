@@ -14,8 +14,8 @@ class chicken_coop : public QDialog
 
 public:
     explicit chicken_coop(QWidget *parent = nullptr);
-    chicken_coop(const chicken_coop&);
-    void operator=(const chicken_coop&);
+//    chicken_coop(const chicken_coop&);
+//    void operator=(const chicken_coop&);
     ~chicken_coop();
 
 private:

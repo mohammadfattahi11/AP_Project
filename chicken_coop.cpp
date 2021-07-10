@@ -7,10 +7,10 @@ chicken_coop::chicken_coop(QWidget *parent) :
 {
     ui->setupUi(this);
 }
-chicken_coop::chicken_coop(const chicken_coop& _chicken_coop){
+//chicken_coop::chicken_coop(const chicken_coop& _chicken_coop){
 
-}
-void chicken_coop::operator=(const chicken_coop& _chicken_coop){}
+//}
+//void chicken_coop::operator=(const chicken_coop& _chicken_coop){}
 chicken_coop::~chicken_coop()
 {
     delete ui;

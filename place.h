@@ -13,22 +13,22 @@ class place : public QDialog
 
 public:
     explicit place(QWidget *parent = nullptr);
-    place(const place&);
-    void operator=(const place&);
+//    place(const place&);
+//    void operator=(const place&);
     ~place();
 
-    int get_unlock_level();
-    int get_capacity();
-    int get_animals_count();
-    double get_feeding_time();
-    bool get_feeded();
-    bool get_product_collected();
-    //////
-    void set_capacity(int );
-    void set_animals_count(int );
-    void set_feeding_time(double );
-    void set_feeded(bool );
-    void set_product_collected(bool );
+//    int get_unlock_level();
+//    int get_capacity();
+//    int get_animals_count();
+//    double get_feeding_time();
+//    bool get_feeded();
+//    bool get_product_collected();
+//    //////
+//    void set_capacity(int );
+//    void set_animals_count(int );
+//    void set_feeding_time(double );
+//    void set_feeded(bool );
+//    void set_product_collected(bool );
 
 private:
 
@@ -36,12 +36,12 @@ private:
 
 protected:
 
-    int Unlock_level;
-    int Capacity;
-    int Animals_count;
-    double Feeding_time;
-    bool Feeded;
-    bool Product_collected;
+//    int Unlock_level;
+//    int Capacity;
+//    int Animals_count;
+//    double Feeding_time;
+//    bool Feeded;
+//    bool Product_collected;
 
 };
 

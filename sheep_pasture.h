@@ -14,8 +14,8 @@ class sheep_pasture : public QDialog
 
 public:
     explicit sheep_pasture(QWidget *parent = nullptr);
-    sheep_pasture(const sheep_pasture&);
-    void operator=(const sheep_pasture&);
+//    sheep_pasture(const sheep_pasture&);
+//    void operator=(const sheep_pasture&);
     ~sheep_pasture();
 
 private:
