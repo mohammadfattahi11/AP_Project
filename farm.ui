@@ -51,7 +51,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="profile_pushButton">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -84,7 +84,7 @@ border: none;</string>
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="store_pushButton">
    <property name="geometry">
     <rect>
      <x>680</x>
@@ -117,7 +117,7 @@ border: none;</string>
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="chicken_pushButton">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -150,7 +150,7 @@ border: none;</string>
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="cow_pushButton">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -183,7 +183,7 @@ border: none;</string>
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="sheep_pushButton">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -216,7 +216,7 @@ border: none;</string>
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_8">
+  <widget class="QPushButton" name="wheat_pushButton">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -249,7 +249,7 @@ border: none;</string>
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_9">
+  <widget class="QPushButton" name="alfalfa_pushButton">
    <property name="geometry">
     <rect>
      <x>930</x>
@@ -282,7 +282,7 @@ border: none;</string>
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_10">
+  <widget class="QPushButton" name="silo_pushButton">
    <property name="geometry">
     <rect>
      <x>930</x>
@@ -315,7 +315,7 @@ border: none;</string>
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_7">
+  <widget class="QPushButton" name="barn_pushButton">
    <property name="geometry">
     <rect>
      <x>480</x>
@@ -654,7 +654,9 @@ border: none;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">backGround : none;</string>
+    <string notr="true">backGround : none;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(0, 0, 0, 0));
+border : none;</string>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -665,19 +667,19 @@ p, li { white-space: pre-wrap; }
    </property>
   </widget>
   <zorder>label</zorder>
-  <zorder>pushButton</zorder>
-  <zorder>pushButton_3</zorder>
-  <zorder>pushButton_4</zorder>
-  <zorder>pushButton_5</zorder>
-  <zorder>pushButton_7</zorder>
-  <zorder>pushButton_10</zorder>
+  <zorder>profile_pushButton</zorder>
+  <zorder>chicken_pushButton</zorder>
+  <zorder>cow_pushButton</zorder>
+  <zorder>sheep_pushButton</zorder>
+  <zorder>barn_pushButton</zorder>
+  <zorder>silo_pushButton</zorder>
   <zorder>label_3</zorder>
   <zorder>label_4</zorder>
   <zorder>label_5</zorder>
   <zorder>label_6</zorder>
-  <zorder>pushButton_8</zorder>
+  <zorder>wheat_pushButton</zorder>
   <zorder>label_9</zorder>
-  <zorder>pushButton_2</zorder>
+  <zorder>store_pushButton</zorder>
   <zorder>label_11</zorder>
   <zorder>label_12</zorder>
   <zorder>label_13</zorder>
@@ -686,7 +688,7 @@ p, li { white-space: pre-wrap; }
   <zorder>label_16</zorder>
   <zorder>label_17</zorder>
   <zorder>label_18</zorder>
-  <zorder>pushButton_9</zorder>
+  <zorder>alfalfa_pushButton</zorder>
   <zorder>label_2</zorder>
   <zorder>label_7</zorder>
   <zorder>textBrowser</zorder>
