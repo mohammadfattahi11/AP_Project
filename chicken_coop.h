@@ -23,7 +23,7 @@ private slots:
 
     void on_upgrade_clicked();
 
-private:
+public:
 
 
     Ui::checken_coop *ui;

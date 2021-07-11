@@ -16,7 +16,7 @@ alfalfa_field::alfalfa_field(QWidget *parent, int _id):
 
     if(info["alfalfa_upgrading"].toBool()){
         ui->btn_upgrade->setEnabled(false);
-        if(ui->prg_upgrade->value() == 100){
+        if(ui->alfalfa_upgrade_pro->value() == 100){
             info["exp"] = QJsonValue(info["exp"].toInt() + 3); //when upgrade finished
             info["alfalfa_level"] = QJsonValue(info["alfalfa_level"].toInt() + 1);
 
