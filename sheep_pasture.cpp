@@ -70,7 +70,6 @@ void sheep_pasture::on_upgrade_clicked()
                info_2[id] = QJsonValue(info);
                _info["User"] = info_2;
                 write_info(_info);
-
 }
 }
 

@@ -17,14 +17,14 @@ class barn : public QDialog
 
 public:
 
-    explicit barn(QWidget *parent = nullptr);
+    explicit barn(QWidget *parent = nullptr, int = 0);
 
     ~barn();
 
 private:
 
     Ui::barn *ui;
-
+    int id;
 
 };
 
