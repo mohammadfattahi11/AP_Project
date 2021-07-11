@@ -4,18 +4,15 @@
 #define CHECKEN_COOP_H
 
 #include <QDialog>
-#include "place.h"
 
 namespace Ui {class checken_coop;}
 
-class chicken_coop : public QDialog , public place
+class chicken_coop : public QDialog
 {
     Q_OBJECT
 
 public:
     explicit chicken_coop(QWidget *parent = nullptr , int = 0);
-    chicken_coop(const chicken_coop&);
-    void operator=(const chicken_coop&);
     ~chicken_coop();
 
 private slots:

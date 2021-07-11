@@ -20,10 +20,6 @@ chicken_coop::chicken_coop(QWidget *parent , int _id) :
      ui->capacity->setText(QString::number( pow(2,info["chicken_level"].toInt())));
      ui->level->setText(QString::number(info["chicken_level"].toInt()));
 }
-chicken_coop::chicken_coop(const chicken_coop& _chicken_coop){
-
-}
-void chicken_coop::operator=(const chicken_coop& _chicken_coop){}
 chicken_coop::~chicken_coop()
 {
     delete ui;

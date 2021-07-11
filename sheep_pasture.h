@@ -4,7 +4,6 @@
 #define SHEEP_PASTURE_H
 
 #include <QDialog>
-#include "place.h"
 
 namespace Ui {class sheep_pasture;}
 

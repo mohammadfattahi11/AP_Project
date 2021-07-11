@@ -4,7 +4,6 @@
 #define COW_PASTURE_H
 
 #include <QDialog>
-#include "place.h"
 #include "milk.h"
 
 namespace Ui {class cow_pasture;}
