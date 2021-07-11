@@ -249,7 +249,7 @@ background-image: url(:/game_backgrounds/pics_project/clipart244133.png);</strin
     <number>10</number>
    </property>
   </widget>
-  <widget class="QProgressBar" name="progressBar_2">
+  <widget class="QProgressBar" name="wheat_upgrade_pro">
    <property name="geometry">
     <rect>
      <x>120</x>

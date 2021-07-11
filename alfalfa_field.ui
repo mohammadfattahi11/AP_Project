@@ -212,7 +212,7 @@ border-bottom-left-radius:20px;</string>
     <string>Harvesting</string>
    </property>
   </widget>
-  <widget class="QProgressBar" name="prg_upgrade">
+  <widget class="QProgressBar" name="alfalfa_upgrade_pro">
    <property name="geometry">
     <rect>
      <x>230</x>
