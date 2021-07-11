@@ -12,6 +12,7 @@ class sheep_pasture : public QDialog
     Q_OBJECT
 
 public:
+
     explicit sheep_pasture(QWidget *parent = nullptr , int = 0);
 
     ~sheep_pasture();
@@ -27,7 +28,6 @@ private:
     int id;
 
     Ui::sheep_pasture *ui;
-
 };
 
 #endif // SHEEP_PASTURE_H

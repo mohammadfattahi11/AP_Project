@@ -6,6 +6,7 @@
 #include<QMessageBox>
 #include<ctime>
 #include<time.h>
+#include<cmath>
 
 chicken_coop::chicken_coop(QWidget *parent , int _id) :
     QDialog(parent),
@@ -63,7 +64,7 @@ void chicken_coop::on_collect_eggs_clicked()
      time_t _time = time(NULL);
      if( (_time -  info["chicken_feed_time"].toInt()) >=20) //172800 )
      {
-       if(ceil(5*pow(1.5,info["barn_level"].toInt()-1))<info["nail_count"].toInt()+info["shovel_count"].toInt()+info["alfalfa_count"].toInt()+info["eggs_count"].toInt()+info["milk_count"].toInt()+info["fleece_count"].toInt() + info["chicen_count"].toInt())//chicken count for added eggs number)
+       if(ceil(5*pow(1.5,info["barn_level"].toInt()-1))<info["nail_count"].toInt()+info["shovel_count"].toInt()+info["alfalfa_count"].toInt()+info["eggs_count"].toInt()+info["milk_count"].toInt()+info["fleece_count"].toInt() + info["chicken_count"].toInt())//chicken count for added eggs number)
            QMessageBox::warning(this , " " ,"");
            else{
          info["eggs_count"] = QJsonValue(info["eggs_count"] .toInt() + info["chicken_count"].toInt());
@@ -97,4 +98,3 @@ void chicken_coop::on_upgrade_clicked()
              write_info(_info);
     }
 }
-

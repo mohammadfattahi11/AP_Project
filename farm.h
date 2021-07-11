@@ -25,6 +25,7 @@ public:
 
 
 private slots:
+
     void on_sheep_pushButton_clicked();
 
     void on_store_pushButton_clicked();

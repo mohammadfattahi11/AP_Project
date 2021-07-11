@@ -1,26 +1,29 @@
 #include "sheep_pasture.h"
 #include "ui_sheep_pasture.h"
-#include "information.h"
-#include "QMessageBox"
+#include"information.h"
+#include<QMessageBox>
+#include<cmath>
+
+
 
 sheep_pasture::sheep_pasture(QWidget *parent , int _id) :
     QDialog(parent),
     ui(new Ui::sheep_pasture)
 {
     ui->setupUi(this);
-    id = _id;
+    id=_id;
     QJsonObject _info = read_info();
-        QJsonObject info = (_info["User"].toArray())[id].toObject();
-        ui->setupUi(this);
-        ui->count->setText(QString::number(info["sheep_count"].toInt()));
-        ui->capacity->setText(QString::number( pow(2,info["sheep_level"].toInt())));
-        ui->level->setText(QString::number(info["sheep_level"].toInt()));
+    QJsonObject info = (_info["User"].toArray())[id].toObject();
+    ui->count->setText(QString::number(info["sheep_count"].toInt()));
+    ui->capacity->setText(QString::number( pow(2,info["sheep_level"].toInt())));
+    ui->level->setText(QString::number(info["sheep_level"].toInt()));
 }
 
 sheep_pasture::~sheep_pasture()
 {
     delete ui;
 }
+
 
 void sheep_pasture::on_feed_clicked()
 {

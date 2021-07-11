@@ -67,7 +67,6 @@ void register_info::on_pushButton_clicked()
                 obj["milk_count"] = 0;  ///////////////////////
                 obj["cow_feed_time"] = -1;
                 obj["cow_upgrade_time"] = -1;
-
                 obj["chicken_count"] = 0 ;
                 obj["chicken_level"] = 0 ;
                 obj["chicken_feed_time"] = -1 ;

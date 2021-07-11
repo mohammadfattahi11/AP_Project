@@ -39,6 +39,7 @@ void farm::on_chicken_pushButton_clicked()
 }
 
 
+
 void farm::on_wheat_pushButton_clicked()
 {
     wheat_field* wheatField = new wheat_field(this, id);

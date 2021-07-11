@@ -2,7 +2,7 @@
 #include "ui_cow_pasture.h"
 #include "information.h"
 #include <QMessageBox>
-
+#include<cmath>
 cow_pasture::cow_pasture(QWidget *parent , int _id) :
     QDialog(parent),
     ui(new Ui::cow_pasture)
