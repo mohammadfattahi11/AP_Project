@@ -248,7 +248,7 @@ color:rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>390</y>
+     <y>350</y>
      <width>113</width>
      <height>21</height>
     </rect>
@@ -268,7 +268,7 @@ color:rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>350</y>
+     <y>390</y>
      <width>113</width>
      <height>21</height>
     </rect>
