@@ -114,6 +114,9 @@ void register_info::on_pushButton_clicked()
 
 
 
+                obj["silo_upgrade_pro"] = -1;
+                obj["silo_upgrade_time"] = -1;
+
                 obj["milks"] = _milk;
 
 

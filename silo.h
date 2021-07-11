@@ -12,7 +12,7 @@ class silo : public QDialog
     Q_OBJECT
 
 public:
-    explicit silo(QWidget *parent = nullptr);
+    explicit silo(QWidget *parent = nullptr, int = 0);
 
     ~silo();
 
@@ -21,7 +21,7 @@ public:
 private:
 
     Ui::silo *ui;
-
+    int id;
 
 };
 
