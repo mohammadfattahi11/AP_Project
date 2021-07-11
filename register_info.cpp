@@ -55,7 +55,6 @@ void register_info::on_pushButton_clicked()
                 obj["level_palyer"] = 1;
                 obj["coin"] = 20;
                 obj["exp"] = 0;
-                obj["ceil_level"] = 0;
 
 
                 obj["sheep_count"] = 0;
