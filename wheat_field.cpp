@@ -18,7 +18,7 @@ wheat_field::wheat_field(QWidget *parent, int _id) :
 
     if(info["wheat_upgrading"].toBool()){
         ui->upgrade->setEnabled(false);
-        if(ui->progressBar_2->value() == 100){
+        if(ui->wheat_upgrade_pro->value() == 100){
             info["exp"] = QJsonValue(info["exp"].toInt() + 3); //when upgrade finished
             info["wheat_level"] = QJsonValue(info["wheat_level"].toInt() + 1);
 
