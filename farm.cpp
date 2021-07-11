@@ -64,7 +64,7 @@ void farm::on_cow_pushButton_clicked()
 
 void farm::on_silo_pushButton_clicked()
 {
-    silo* _silo = new silo(this);
+    silo* _silo = new silo(this, id);
     _silo->show();
 }
 
