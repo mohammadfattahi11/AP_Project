@@ -49,7 +49,7 @@ void farm::on_wheat_pushButton_clicked()
 
 void farm::on_barn_pushButton_clicked()
 {
-    barn* _barn = new barn(this);
+    barn* _barn = new barn(this, id);
     _barn->show();
 }
 
