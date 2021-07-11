@@ -1,5 +1,6 @@
 #include "farm.h"
 #include "ui_farm.h"
+#include"cow_pasture.h"
 
 farm::farm(QWidget *parent, int _id) :
     QDialog(parent),
@@ -9,27 +10,7 @@ farm::farm(QWidget *parent, int _id) :
     id = _id;
 }
 
-//farm::farm(const farm & _farm)
-//{
-//    Barn = _farm.Barn;
-//    Silo = _farm.Silo;
-//    Chicken_Coop = _farm.Chicken_Coop;
-//    Cow_Pasture = _farm.Cow_Pasture;
-//    Sheep_Pasture = _farm.Sheep_Pasture;
-//    Alfalfa_Field = _farm.Alfalfa_Field;
-//    Wheat_Field = _farm.Wheat_Field;
-//}
 
-//void farm::operator=(const farm & _farm)
-//{
-//    Barn = _farm.Barn;
-//    Silo = _farm.Silo;
-//    Chicken_Coop = _farm.Chicken_Coop;
-//    Cow_Pasture = _farm.Cow_Pasture;
-//    Sheep_Pasture = _farm.Sheep_Pasture;
-//    Alfalfa_Field = _farm.Alfalfa_Field;
-//    Wheat_Field = _farm.Wheat_Field;
-//}
 
 farm::~farm()
 {
@@ -39,7 +20,7 @@ farm::~farm()
 
 void farm::on_sheep_pushButton_clicked()
 {
-    sheep_pasture * _sheep_pasture = new sheep_pasture(this);
+    sheep_pasture * _sheep_pasture = new sheep_pasture(this , id);
     _sheep_pasture->show();
 }
 
@@ -75,7 +56,7 @@ void farm::on_barn_pushButton_clicked()
 
 void farm::on_cow_pushButton_clicked()
 {
-    cow_pasture* _cow_pasture = new cow_pasture(this);
+    cow_pasture* _cow_pasture = new cow_pasture(this , id);
     _cow_pasture->show();
 }
 
@@ -96,7 +77,7 @@ void farm::on_alfalfa_pushButton_clicked()
 
 void farm::on_profile_pushButton_clicked()
 {
-    game* gamer = new game(this);
+    game* gamer = new game(this );
     gamer->show();
 }
 

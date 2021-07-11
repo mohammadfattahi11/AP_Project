@@ -13,17 +13,15 @@ class milk : public QDialog
 
 public:
     explicit milk(QWidget *parent = nullptr);
-//    milk(const milk&);
-//    void operator=(const milk&);
+
     ~milk();
 
-//    double get_collect_milk_time();
-//    void set_collect_milk_time(double );
+
 
 private:
 
     Ui::milk *ui;
-//    double Collect_milk_time;
+
 
 };
 
