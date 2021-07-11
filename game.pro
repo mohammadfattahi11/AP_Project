@@ -18,10 +18,10 @@ SOURCES += \
     main.cpp \
     game.cpp \
     milk.cpp \
-    place.cpp \
     register_info.cpp \
     sheep_pasture.cpp \
     silo.cpp \
+    store.cpp \
     wheat_field.cpp
 
 HEADERS += \
@@ -34,10 +34,10 @@ HEADERS += \
     information.h \
     login.h \
     milk.h \
-    place.h \
     register_info.h \
     sheep_pasture.h \
     silo.h \
+    store.h \
     wheat_field.h
 
 FORMS += \
@@ -49,10 +49,10 @@ FORMS += \
     game.ui \
     login.ui \
     milk.ui \
-    place.ui \
     register_info.ui \
     sheep_pasture.ui \
     silo.ui \
+    store.ui \
     wheat_field.ui
 
 # Default rules for deployment.

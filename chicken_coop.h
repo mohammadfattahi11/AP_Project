@@ -4,11 +4,9 @@
 #define CHECKEN_COOP_H
 
 #include <QDialog>
-#include "place.h"
-
 namespace Ui {class checken_coop;}
 
-class chicken_coop : public QDialog , public place
+class chicken_coop : public QDialog
 {
     Q_OBJECT
 
@@ -22,7 +20,7 @@ private slots:
 
     void on_feed_clicked();
 
-    void on_claim_eggs_clicked();
+    void on_collect_eggs_clicked();
 
     void on_upgrade_clicked();
 
@@ -31,12 +29,6 @@ private:
 
     Ui::checken_coop *ui;
     int id ;
-    //    int Unlock_level;
-    //    int Capacity;
-    //    int Animals_count;
-    //    double Feeding_time;
-    //    bool Feeded;
-    //    bool Product_collected;
 
 };
 
