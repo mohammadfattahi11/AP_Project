@@ -4,14 +4,16 @@
 #include<QMessageBox>
 #include<cmath>
 
+
+
 sheep_pasture::sheep_pasture(QWidget *parent , int _id) :
     QDialog(parent),
     ui(new Ui::sheep_pasture)
 {
+    ui->setupUi(this);
     id=_id;
     QJsonObject _info = read_info();
     QJsonObject info = (_info["User"].toArray())[id].toObject();
-    ui->setupUi(this);
     ui->count->setText(QString::number(info["sheep_count"].toInt()));
     ui->capacity->setText(QString::number( pow(2,info["sheep_level"].toInt())));
     ui->level->setText(QString::number(info["sheep_level"].toInt()));

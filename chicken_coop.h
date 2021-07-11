@@ -4,6 +4,7 @@
 #define CHECKEN_COOP_H
 
 #include <QDialog>
+
 namespace Ui {class checken_coop;}
 
 class chicken_coop : public QDialog
@@ -12,8 +13,6 @@ class chicken_coop : public QDialog
 
 public:
     explicit chicken_coop(QWidget *parent = nullptr , int = 0);
-    chicken_coop(const chicken_coop&);
-    void operator=(const chicken_coop&);
     ~chicken_coop();
 
 private slots:

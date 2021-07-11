@@ -4,7 +4,6 @@
 #define BARN_H
 
 #include <QDialog>
-#include "milk.h"
 #include <QVector>
 #include <deque>
 
