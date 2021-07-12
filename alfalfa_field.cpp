@@ -14,22 +14,54 @@ alfalfa_field::alfalfa_field(QWidget *parent, int _id):
     QJsonObject _info = read_info();
     QJsonObject info = (_info["User"].toArray())[id].toObject();
 
-    if(info["alfalfa_upgrade_time"].toInt() != -1){
+    if(info["alfalfa_upgrade_time"].toInt() != -1)
         ui->btn_upgrade->setEnabled(false);
-    }
 
-    _info = read_info();
-    info = (_info["User"].toArray())[id].toObject();
 
     ui->spinBox->setMaximum(4 * pow(2, info["alfalfa_level"].toInt() - 1));
     ui->lbl_area_value->setText(QString::number(4 * pow(2, info["alfalfa_level"].toInt() - 1)));
     ui->lbl_level_value->setText(QString::number(info["alfalfa_level"].toInt()));
     ui->lbl_cultivated_area_value->setText(QString::number(info["alfalfa_cultivated_area"].toInt()));
+
+     ui->alfalfa_upgrade_pro->setValue(info["alfalfa_upgrade_pro"].toInt());
+     timer1 = new QTimer();
+     timer2 = new QTimer();
+
+
+     if(info["alfalfa_upgrade_time"].toInt() != -1)
+         timer1->start(2592000);
+     if(info["alfalfa_plow_time"].toInt() != -1)
+         timer2->start(864000);
+
+
+     connect(timer1,SIGNAL(timeout()),this,SLOT(increamenter_upgrade()));
+
+     connect(timer2,SIGNAL(timeout()),this,SLOT(increamenter_plow()));
+
+
+
+
 }
 
 alfalfa_field::~alfalfa_field()
 {
-    delete ui; 
+    delete ui;
+}
+
+void alfalfa_field::increamenter_upgrade()
+{
+    int aux = 0;
+    aux = ui->alfalfa_upgrade_pro->value();
+    aux++;
+    ui->alfalfa_upgrade_pro->setValue(aux);
+}
+
+void alfalfa_field::increamenter_plow()
+{
+    int aux = 0;
+    aux = ui->plow_pro->value();
+    aux++;
+    ui->plow_pro->setValue(aux);
 }
 
 void alfalfa_field::on_btn_upgrade_clicked()
@@ -38,9 +70,9 @@ void alfalfa_field::on_btn_upgrade_clicked()
     QJsonObject info = (_info["User"].toArray())[id].toObject();
     if(info["level"].toInt() < 4)
         QMessageBox::warning(this , " " , "You have not reached <b>level 4</b> yet!!!" );
-    else if(info["coin"].toInt() < 5 * (4 * pow(2, info["alfalfa_level"].toInt() - 1)))
+    else if(info["coin"].toInt() < 5 *(4 *pow(2, info["alfalfa_level"].toInt() - 1)))
         QMessageBox::warning(this , " " , "<b>Coin</b> needed!" );
-    else if(info["shovel_count"].toInt() < 2 * (4 * pow(2, info["alfalfa_level"].toInt() - 1)))
+    else if(info["shovel_count"].toInt() < 2 * (4 *pow(2, info["alfalfa_level"].toInt() - 1)))
         QMessageBox::warning(this , " " , "<b>Shovel</b> needed!" );
     else{
         info["shovel_count"] = QJsonValue(info["shovel_count"].toInt() - 2 * (4 * pow(2, info["alfalfa_level"].toInt() - 1)));
@@ -105,7 +137,8 @@ void alfalfa_field::on_btn_plow_clicked()
     QJsonObject info = (_info["User"].toArray())[id].toObject();
     if(info["alfalfa_in_use"].toBool())
         QMessageBox::warning(this , " " , "You havent seed yet!");
-    else{
+    else
+    {
         time_t _time = time(0);
         info["alfalfa_plow_time"] = QJsonValue(_time);
         QJsonArray info_2 = _info["User"].toArray();

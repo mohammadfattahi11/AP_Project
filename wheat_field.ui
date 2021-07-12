@@ -23,7 +23,7 @@
   <property name="styleSheet">
    <string notr="true">background-image: url(:/game_backgrounds/pics_project/qqqq.jpg);</string>
   </property>
-  <widget class="QProgressBar" name="progressBar">
+  <widget class="QProgressBar" name="seed_progress">
    <property name="geometry">
     <rect>
      <x>220</x>

@@ -18,6 +18,9 @@ public:
 
 
 
+private slots:
+    void on_upgrade_clicked();
+
 private:
 
     Ui::silo *ui;

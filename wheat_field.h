@@ -4,6 +4,7 @@
 #define WHEAT_FIELD_H
 
 #include <QDialog>
+#include <QTimer>
 
 namespace Ui {class wheat_field;}
 
@@ -22,10 +23,14 @@ private slots:
 
     void on_Harvesting_clicked();
 
+public slots:
+    void increamenter();
+
 private:
 
     Ui::wheat_field *ui;
     int id ;
+    QTimer* timer1 ;
 
 };
 
