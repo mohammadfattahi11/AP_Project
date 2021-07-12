@@ -8,13 +8,14 @@ silo::silo(QWidget *parent, int _id) :
 {
        id = _id;
        ui->setupUi(this);
-       QJsonObject _info = read_info();
-       QJsonObject info = (_info["User"].toArray())[id].toObject();
+       _info = read_info();
+        info = (_info["User"].toArray())[id].toObject();
        ui->capacity->setText(QString::number(5 * pow(2,info["silo_level"].toInt())));
        ui->level->setText(QString::number(info["silo_level"].toInt()));
        ui->wheat->setText(QString::number(info["wheat_count"].toInt()));
-       if(info["silo_upgrade_time"]!=-1)
-           ui->upgrade->setEnabled(false);
+       if(info["silo_upgrade_time"] == -1)
+           ui->silo_pro->hide();
+
 }
 
 silo::~silo()
@@ -24,8 +25,7 @@ silo::~silo()
 
 void silo::on_upgrade_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+
     QMessageBox::StandardButton reply;
     reply = QMessageBox::question(this," ","Are you sure? you want to upgrade?", QMessageBox::Yes | QMessageBox::No);
     if(reply == QMessageBox::Yes){

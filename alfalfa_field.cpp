@@ -11,11 +11,12 @@ alfalfa_field::alfalfa_field(QWidget *parent, int _id):
 {
     ui->setupUi(this);
     id = _id;
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+     _info = read_info();
+     info = (_info["User"].toArray())[id].toObject();
 
-    if(info["alfalfa_upgrade_time"].toInt() != -1)
-        ui->btn_upgrade->setEnabled(false);
+    if(info["alfalfa_upgrade_time"].toInt() == -1)
+        ui->alfalfa_upgrade_pro->hide();
+
 
 
     ui->spinBox->setMaximum(4 * pow(2, info["alfalfa_level"].toInt() - 1));
@@ -66,8 +67,6 @@ void alfalfa_field::increamenter_plow()
 
 void alfalfa_field::on_btn_upgrade_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
     if(info["level"].toInt() < 4)
         QMessageBox::warning(this , " " , "You have not reached <b>level 4</b> yet!!!" );
     else if(info["coin"].toInt() < 5 *(4 *pow(2, info["alfalfa_level"].toInt() - 1)))
@@ -89,8 +88,6 @@ void alfalfa_field::on_btn_upgrade_clicked()
 
 void alfalfa_field::on_btn_seed_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
     if(!info["alfalfa_plowed"].toBool())
         QMessageBox::warning(this , " " , "You have to plow field first!");
     else if(info["alfalfa_in_use"].toBool())
@@ -113,8 +110,7 @@ void alfalfa_field::on_btn_seed_clicked()
 
 void alfalfa_field::on_btn_harvesting_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+
     if(!info["alfalfa_in_use"].toBool())
         QMessageBox::warning(this , " " , "You havent seed yet!");
     else if(ui->prg_harvesting->value() != 100)
@@ -133,8 +129,7 @@ void alfalfa_field::on_btn_harvesting_clicked()
 
 void alfalfa_field::on_btn_plow_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+
     if(info["alfalfa_in_use"].toBool())
         QMessageBox::warning(this , " " , "You havent seed yet!");
     else

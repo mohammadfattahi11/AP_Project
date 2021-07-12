@@ -5,7 +5,8 @@
 
 #include <QDialog>
 #include <QTimer>
-
+#include <QJsonObject>
+#include <QJsonArray>
 namespace Ui {class wheat_field;}
 
 class wheat_field : public QDialog
@@ -31,6 +32,7 @@ private:
     Ui::wheat_field *ui;
     int id ;
     QTimer* timer1 ;
+    QJsonObject info ,_info ;
 
 };
 

@@ -4,6 +4,8 @@
 #define SILO_H
 
 #include <QDialog>
+#include<QJsonObject>
+#include<QJsonArray>
 
 namespace Ui {class silo;}
 
@@ -25,6 +27,7 @@ private:
 
     Ui::silo *ui;
     int id;
+    QJsonObject info ,_info ;
 
 };
 

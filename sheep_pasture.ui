@@ -143,6 +143,19 @@
     <number>24</number>
    </property>
   </widget>
+  <widget class="QPushButton" name="build">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>30</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>build</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
