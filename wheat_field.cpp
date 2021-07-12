@@ -14,11 +14,12 @@ wheat_field::wheat_field(QWidget *parent, int _id) :
 {
     ui->setupUi(this);
     id = _id;
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+    _info = read_info();
+    info = (_info["User"].toArray())[id].toObject();
 
-    if(info["wheat_upgrade_time"].toInt() != -1)
-        ui->upgrade->setEnabled(false);
+    if(info["wheat_upgrade_time"].toInt() == -1)
+        ui->wheat_upgrade_pro->hide();
+
 
     ui->spinBox->setMaximum(5 * pow(2, info["wheat_level"].toInt() - 1));
     ui->label_3->setText(QString::number(5 * pow(2, info["wheat_level"].toInt() - 1)));
@@ -55,8 +56,7 @@ void wheat_field::increamenter()
 
 void wheat_field::on_upgrade_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+
     if(info["level"].toInt() < 2)
         QMessageBox::warning(this , " " , "You have not reached <b>level 2</b> yet!!!" );
     else if(info["coin"].toInt() < 5)
@@ -78,8 +78,6 @@ void wheat_field::on_upgrade_clicked()
 
 void wheat_field::on_seed_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
 
     if(info["wheat_in_use"].toBool())
         QMessageBox::warning(this , " " , "After harvesting, you can seed");
@@ -100,8 +98,6 @@ void wheat_field::on_seed_clicked()
 
 void wheat_field::on_Harvesting_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
     if(!info["wheat_in_use"].toBool())
         QMessageBox::warning(this , " " , "You havent seed yet!");
     else if(ui->seed_progress->value() != 100)

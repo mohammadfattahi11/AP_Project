@@ -12,11 +12,22 @@ sheep_pasture::sheep_pasture(QWidget *parent , int _id) :
 {
     ui->setupUi(this);
     id=_id;
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+     _info = read_info();
+     info = (_info["User"].toArray())[id].toObject();
     ui->count->setText(QString::number(info["sheep_count"].toInt()));
     ui->capacity->setText(QString::number( pow(2,info["sheep_level"].toInt())));
     ui->level->setText(QString::number(info["sheep_level"].toInt()));
+
+    if(info["sheep_upgrade_time"].toInt() == -1)
+       ui->sheep_pro->hide();
+
+    timer = new QTimer();
+    ui->sheep_pro->setValue(info["sheep_upgrade_pro"].toInt());
+
+     if(info["sheep_upgrade_time"].toInt() != -1)
+       timer->start(7776000);
+
+     connect(timer,SIGNAL(timeout()),this,SLOT(increamenter()));
 }
 
 sheep_pasture::~sheep_pasture()
@@ -24,11 +35,18 @@ sheep_pasture::~sheep_pasture()
     delete ui;
 }
 
+void sheep_pasture::increamenter()
+{
+    int aux = 0;
+    aux = ui->sheep_pro->value();
+    aux++;
+    ui->sheep_pro->setValue(aux);
+}
 
 void sheep_pasture::on_feed_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+
+
     if(info["sheep_feed_time"].toInt() != -1)
     QMessageBox::warning(this , " " ,"w");
     else{
@@ -56,8 +74,7 @@ void sheep_pasture::on_feed_clicked()
 
 void sheep_pasture::on_upgrade_clicked()
 {
-    QJsonObject _info = read_info();
-       QJsonObject info = (_info["User"].toArray())[id].toObject();
+
       if(info["nail_count"].toInt()  < 3 || info["shovel_count"].toInt()  < 1 || info["coin"].toInt() < 50 || info["level_palyer"].toInt() < 7 || info["level_palyer"].toInt() < info["sheep_level"].toInt() + 6 )
            QMessageBox::warning(this , " " ," ");
        else{
@@ -76,8 +93,7 @@ void sheep_pasture::on_upgrade_clicked()
 
 void sheep_pasture::on_Fleece_Shave_clicked()
 {
-    QJsonObject _info = read_info();
-        QJsonObject info = (_info["User"].toArray())[id].toObject();
+
          time_t _time = time(NULL);
          if( (_time -  info["sheep_feed_time"].toInt()) >=864000)
          {

@@ -27,7 +27,7 @@ void farm::on_sheep_pushButton_clicked()
 
 void farm::on_store_pushButton_clicked()
 {
-    store *Store=new store(this);
+    store *Store=new store(this , id);
     Store->show();
 }
 
@@ -71,14 +71,14 @@ void farm::on_silo_pushButton_clicked()
 
 void farm::on_alfalfa_pushButton_clicked()
 {
-    alfalfa_field* _alfalfa = new alfalfa_field(this);
+    alfalfa_field* _alfalfa = new alfalfa_field(this , id);
     _alfalfa->show();
 }
 
 
 void farm::on_profile_pushButton_clicked()
 {
-    game* gamer = new game(this );
+    game* gamer = new game(this);
     gamer->show();
 }
 

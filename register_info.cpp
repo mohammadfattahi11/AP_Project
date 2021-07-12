@@ -68,12 +68,15 @@ void register_info::on_pushButton_clicked()
                 obj["milk_count"] = 0;  ///////////////////////
                 obj["cow_feed_time"] = -1;
                 obj["cow_upgrade_time"] = -1;
+                obj["cow_upgrade_pro"] =  -1;
+
+
                 obj["chicken_count"] = 0 ;
                 obj["chicken_level"] = 0 ;
                 obj["chicken_feed_time"] = -1 ;
                 obj["eggs_count"] = 0;
                 obj["chicken_upgrade_time"] = -1;
-                obj["chicken_upgrade_pro"] = -1;
+                obj["chicken_upgrade_pro"] = -1 ;
 
                 obj["silo_level"] = 1;
                 obj["nail_count"] = 1;
@@ -87,7 +90,7 @@ void register_info::on_pushButton_clicked()
                 obj["wheat_in_use"] = false;
                 obj["wheat_seed_time"] = -1;
                 obj["wheat_upgrade_time"] = -1;
-                obj["wheat_upgrade_pro"] = -1;
+                obj["wheat_upgrade_pro"] =  0 ;
                 obj["wheat_seed_pro"] = -1;
 
                 obj["alfalfa_level"] = 0;

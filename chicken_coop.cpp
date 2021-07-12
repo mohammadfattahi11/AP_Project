@@ -14,24 +14,47 @@ chicken_coop::chicken_coop(QWidget *parent , int _id) :
 {
     ui->setupUi(this);
     id = _id;
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
-     ui->setupUi(this);
+
+     _info = read_info();
+     info = (_info["User"].toArray())[id].toObject();
+
      ui->count->setText(QString::number(info["chicken_count"].toInt()));
      ui->capacity->setText(QString::number( pow(2,info["chicken_level"].toInt())));
      ui->level->setText(QString::number(info["chicken_level"].toInt()));
+
+
+     if(info["chicken_upgrade_time"].toInt() == -1)
+         ui->chicken_pro->hide();
+
+
+     timer = new QTimer();
+
+     ui->chicken_pro->setValue(info["chicken_upgrade_pro"].toInt());
+
+      if(info["chicken_upgrade_time"].toInt() != -1)
+        timer->start(2592000);
+
+      connect(timer,SIGNAL(timeout()),this,SLOT(increamenter()));
+
+
 }
 chicken_coop::~chicken_coop()
 {
     delete ui;
 }
 
+void chicken_coop::increamenter()
+{
+    int aux = 0;
+    aux = ui->chicken_pro->value();
+    aux++;
+    ui->chicken_pro->setValue(aux);
+}
 
 
 void chicken_coop::on_feed_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+
     if(info["chicken_feed_time"].toInt() != -1)
     QMessageBox::warning(this , " " ,"w");
     else{
@@ -59,8 +82,6 @@ void chicken_coop::on_feed_clicked()
 
 void chicken_coop::on_collect_eggs_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
      time_t _time = time(NULL);
      if( (_time -  info["chicken_feed_time"].toInt()) >=20) //172800 )
      {
@@ -83,8 +104,6 @@ void chicken_coop::on_collect_eggs_clicked()
 
 void chicken_coop::on_upgrade_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
     if(info["nail_count"].toInt()  < 1 || info["coin"].toInt() < 10 || info["level_palyer"].toInt() < 3 || info["level_palyer"].toInt() < info["chicken_level"].toInt() + 1 )
         QMessageBox::warning(this , " " ," ");
     else{

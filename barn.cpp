@@ -9,8 +9,8 @@ barn::barn(QWidget *parent, int _id) :
 {
     id = _id;
     ui->setupUi(this);
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+    _info = read_info();
+    info = (_info["User"].toArray())[id].toObject();
     ui->level->setText(QString::number(info["barn_level"].toInt()));
     ui->capacity->setText(QString::number(ceil(5*pow(1.5,info["barn_level"].toInt()-1))));
     ui->shovel->setText(QString::number(info["shovel_count"].toInt()));
@@ -19,8 +19,9 @@ barn::barn(QWidget *parent, int _id) :
     ui->egg->setText(QString::number(info["eggs_count"].toInt()));
     ui->milk->setText(QString::number(info["milks"].toArray().size()));
     ui->fleece->setText(QString::number(info["fleece_count"].toInt()));
-       if(info["barn_upgrade_time"]!=-1)
-           ui->upgrade->setEnabled(false);
+       if(info["barn_upgrade_time"] == -1)
+           ui->barn_pro->hide();
+
 }
 
 barn::~barn()
@@ -30,8 +31,7 @@ barn::~barn()
 
 void barn::on_upgrade_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+
     QMessageBox::StandardButton reply;
     reply = QMessageBox::question(this," ","Are you sure? you want to upgrade?", QMessageBox::Yes | QMessageBox::No);
     if(reply == QMessageBox::Yes){

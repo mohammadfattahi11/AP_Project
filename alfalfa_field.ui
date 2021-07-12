@@ -316,6 +316,19 @@ border-bottom-left-radius:20px;</string>
     <string>Plow</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="build">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>110</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>build</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="game_recources.qrc"/>

@@ -4,6 +4,9 @@
 #define CHECKEN_COOP_H
 
 #include <QDialog>
+#include <QTimer>
+#include<QJsonObject>
+#include<QJsonArray>
 
 namespace Ui {class checken_coop;}
 
@@ -23,11 +26,15 @@ private slots:
 
     void on_upgrade_clicked();
 
+    void increamenter();
+
 public:
 
 
     Ui::checken_coop *ui;
     int id ;
+    QTimer *timer;
+    QJsonObject info ,_info ;
 
 };
 
