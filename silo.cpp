@@ -31,21 +31,21 @@ void silo::on_upgrade_clicked()
     if(reply == QMessageBox::Yes){
          if((info["silo_level"].toInt() + 1 )>=info["level_palyer"].toInt())
             QMessageBox::warning(this , " " ," ");
-else{
-if((info["nail_count"].toInt()<(2*info["silo_level"].toInt()))||(info["shovel_count"].toInt()<(info["silo_level"].toInt()-2))||(info["coin"].toInt()<(100*pow((2*info["silo_level"].toInt()),2))))
-    QMessageBox::warning(this , " " ," ");
-else{
-info["nail_count"]=QJsonValue(info["nail_count"].toInt()-2*info["silo_level"].toInt());
-  info["coin"]=QJsonValue( info["coin"].toInt() - (100*pow((2*info["silo_level"].toInt()),2)));
-  if(info["silo_level"].toInt()>2)
-      info["shovel_count"]=QJsonValue(info["shovel_count"].toInt()-(info["silo_level"].toInt()-2));
-  time_t _time = time(NULL);
-  info["silo_upgrade_time"] = _time;
-  QJsonArray info_2 = _info["User"].toArray();
-     info_2[id] = QJsonValue(info);
-     _info["User"] = info_2;
-      write_info(_info);
-}
-}
-}
+         else{
+             if((info["nail_count"].toInt()<(2*info["silo_level"].toInt()))||(info["shovel_count"].toInt()<(info["silo_level"].toInt()-2))||(info["coin"].toInt()<(100*pow((2*info["silo_level"].toInt()),2))))
+                 QMessageBox::warning(this , " " ," ");
+             else{
+                 info["nail_count"]=QJsonValue(info["nail_count"].toInt()-2*info["silo_level"].toInt());
+                 info["coin"]=QJsonValue( info["coin"].toInt() - (100*pow((2*info["silo_level"].toInt()),2)));
+                 if(info["silo_level"].toInt()>2)
+                     info["shovel_count"]=QJsonValue(info["shovel_count"].toInt()-(info["silo_level"].toInt()-2));
+                 time_t _time = time(NULL);
+                 info["silo_upgrade_time"] = _time;
+                 QJsonArray info_2 = _info["User"].toArray();
+                 info_2[id] = QJsonValue(info);
+                 _info["User"] = info_2;
+                 write_info(_info);
+             }
+         }
+    }
 }
