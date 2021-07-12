@@ -299,6 +299,9 @@ background-image: url(:/game_backgrounds/pics_project/clipart244133.png);</strin
      <height>41</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-image: url(:/game_backgrounds/pics_project/clipart244133.png);
 font: 14pt &quot;MS Shell Dlg 2&quot;;

@@ -22,6 +22,7 @@ login::login(QWidget *parent) :
         info["chicken_level"] = QJsonValue(info["chicken_level"].toInt() + 1); //when upgrade finished
           info["exp"] = QJsonValue(info["exp"].toInt() + 5);
     }
+
          else if(info["chicken_upgrade_time"].toInt() != -1){
              int dif_time = _time - info["chicken_upgrade_time"].toInt();
              info["chicken_upgrade_pro"] = (dif_time * 100 /259200);
@@ -78,11 +79,38 @@ login::login(QWidget *parent) :
              info["alfalfa_upgrade_pro"]  = dif_time * 100 /259200;
         }
 
+        if(info["barn_upgrade_pro"].toInt() != -1 && _time - info["barn_upgrade_pro"].toInt() > 432000)
+        {
+            info["barn_upgrade_pro"] = -1;
+            info["exp"] = QJsonValue(info["exp"].toInt() + 3 *(info["barn_level"].toInt())); //when upgrade finished
+            info["barn_level"] =  QJsonValue(info["barn_level"].toInt() + 1) ;
+        }
+        else if(info["barn_upgrade_time"].toInt() != -1)
+        {
+            int dif_time = _time - info["barn_upgrade_time"].toInt();
+            info["barn_upgrade_pro"]  = dif_time * 100 /432000;
+
+        }
+
+
+        if(info["silo_upgrade_pro"].toInt() != -1 && _time - info["silo_upgrade_pro"].toInt() > 345600)
+        {
+            info["silo_upgrade_pro"] = -1;
+            info["exp"] = QJsonValue(info["exp"].toInt() + 2 *(info["silo_level"].toInt())); //when upgrade finished
+            info["silo_level"] =  QJsonValue(info["silo_level"].toInt() + 1) ;
+        }
+        else if(info["silo_upgrade_time"].toInt() != -1)
+        {
+            int dif_time = _time - info["silo_upgrade_time"].toInt();
+            info["silo_upgrade_pro"]  = dif_time * 100 /345600;
+
+        }
 
             info_2.push_back(QJsonValue(info));
 
 
     }
+      check_level();
     _info["User"] = info_2;
     write_info(_info);
 }
