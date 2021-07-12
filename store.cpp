@@ -11,8 +11,8 @@ store::store(QWidget *parent, int _id) :
 {
     id=_id;
     ui->setupUi(this);
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+     _info = read_info();
+     info = (_info["User"].toArray())[id].toObject();
     ui->coin_label->setText(QString::number(info["coin"].toInt()));
 
     ui->alfalfa_label->setText(QString::number(info["alfalfa_count"].toInt()));
@@ -37,8 +37,7 @@ store::~store()
 
 void store::on_sell_pushButton_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
+
     int cow_num,hen_num,wool_num,sheep_num,nail_num,milk_num,egg_num,wheat_num,alfalfa_num,shovel_num;
 
 
@@ -175,10 +174,8 @@ void store::on_sell_pushButton_clicked()
 
 void store::on_buy_pushButton_clicked()
 {
-    QJsonObject _info = read_info();
-    QJsonObject info = (_info["User"].toArray())[id].toObject();
-    int cow_num,hen_num,wool_num,sheep_num,nail_num,milk_num,egg_num,wheat_num,alfalfa_num,shovel_num;
 
+    int cow_num,hen_num,wool_num,sheep_num,nail_num,milk_num,egg_num,wheat_num,alfalfa_num,shovel_num;
 
     cow_num=ui->cow_spinBox->text().toInt();
     if(info["level_palyer"].toInt()<4&&cow_num>0)

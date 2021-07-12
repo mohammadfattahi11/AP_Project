@@ -6,6 +6,8 @@
 #include <QDialog>
 #include <QVector>
 #include <deque>
+#include <QJsonObject>
+#include <QJsonArray>
 
 using namespace std;
 
@@ -28,6 +30,7 @@ private:
 
     Ui::barn *ui;
     int id;
+    QJsonObject info ,_info ;
 
 };
 

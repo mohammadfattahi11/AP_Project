@@ -25,6 +25,7 @@ private slots:
 
 private:
     Ui::store *ui;
+    QJsonObject info ,_info ;
 };
 
 #endif // STORE_H

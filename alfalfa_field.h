@@ -2,9 +2,10 @@
     
 #ifndef ALFALFA_FIELD_H
 #define ALFALFA_FIELD_H
-
 #include <QDialog>
 #include<QTimer>
+#include <QJsonObject>
+#include <QJsonArray>
 
 namespace Ui {class alfalfa_field;}
 
@@ -34,6 +35,7 @@ private:
     Ui::alfalfa_field *ui;
     int id;
     QTimer* timer1 , *timer2 ;
+    QJsonObject info ,_info ;
 
 };
 
