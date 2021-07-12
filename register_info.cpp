@@ -85,21 +85,21 @@ void register_info::on_pushButton_clicked()
                 obj["wheat_count"] = 1;
                 obj["wheat_cultivated_area"] = 0;
                 obj["wheat_in_use"] = false;
-                obj["wheat_seed_time"] = 0;
+                obj["wheat_seed_time"] = -1;
                 obj["wheat_upgrade_time"] = -1;
                 obj["wheat_upgrade_pro"] = -1;
-                obj["wheat_harvesting_pro"] = -1;
+                obj["wheat_seed_pro"] = -1;
 
                 obj["alfalfa_level"] = 0;
                 obj["alfalfa_count"] = 1;
                 obj["alfalfa_cultivated_area"] = 0;
                 obj["alfalfa_in_use"] = false;
-                obj["alfalfa_seed_time"] = 0;
-                obj["alfalfa_plow_time"] = 0;
+                obj["alfalfa_seed_time"] = -1;
+                obj["alfalfa_plow_time"] = -1;
                 obj["alfalfa_is_plow"] = false;
                 obj["alfalfa_upgrade_time"] = -1;
                 obj["alfalfa_upgrade_pro"] = -1;
-                obj["alfalfa_harvesting_pro"] = -1;
+                obj["alfalfa_seed_pro"] = -1;
 
                 obj["barn_upgrade_pro"] = -1;
                 obj["barn_upgrade_time"] = -1;

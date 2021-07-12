@@ -58,11 +58,29 @@ login::login(QWidget *parent) :
             info["wheat_upgrade_pro"] = -1;
         info["wheat_level"] = QJsonValue(info["wheat_level"].toInt() + 1); //when upgrade finished
           info["exp"] = QJsonValue(info["exp"].toInt() + 3 * 5 * pow(2, info["wheat_level"].toInt() - 2));
-    }
+         }
         else if(info["wheat_upgrade_time"].toInt() != -1){
              int dif_time = _time - info["wheat_upgrade_time"].toInt();
             info["wheat_upgrade_pro"] = dif_time * 100 /172800 ;
         }
+
+        if(info["wheat_seed_time"].toInt() != -1 && _time - info["wheat_seed_time"].toInt() >= 172800)
+            info["wheat_seed_time"] = -1;
+
+        else if(info["wheat_seed_time"].toInt() != -1){
+           int dif_time = _time - info["wheat_seed_time"].toInt();
+            info["wheat_seed_pro"] = dif_time * 100 /172800 ;
+        }
+
+        if(info["alfalfa_seed_time"].toInt() != -1 && _time - info["alfalfa_seed_time"].toInt() >= 345600)
+            info["alfalfa_seed_time"] = -1;
+
+        else if(info["alfalfa_seed_time"].toInt() != -1){
+           int dif_time = _time - info["alfalfa_seed_time"].toInt();
+            info["alfalfa_seed_pro"] = dif_time * 100 /345600 ;
+        }
+
+
 
 
 
@@ -106,9 +124,12 @@ login::login(QWidget *parent) :
 
         }
 
+        for(int j= 0 ; j < info["milks"].toArray().size() ; j++ )
+        {
+           if(_time - info["milks"].toArray()[j].toInt() >= 864000)
+               info["milks"].toArray().erase(info["milks"].toArray().begin() + j);
+        }
             info_2.push_back(QJsonValue(info));
-
-
     }
       check_level();
     _info["User"] = info_2;
