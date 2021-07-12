@@ -56,7 +56,6 @@ void register_info::on_pushButton_clicked()
                 obj["coin"] = 20;
                 obj["exp"] = 0;
 
-
                 obj["sheep_count"] = 0;
                 obj["sheep_level"] = 0;
                 obj["fleece_count"] = 0;
@@ -77,16 +76,10 @@ void register_info::on_pushButton_clicked()
                 obj["chicken_upgrade_pro"] = -1;
 
                 obj["silo_level"] = 1;
-                obj["silo_upgrade_pro"] = -1;
-                obj["silo_upgrade_time"] = -1;
-
                 obj["nail_count"] = 1;
                 obj["shovel_count"] = 0;
 
                 obj["barn_level"]=1;
-                obj["barn_upgrade_pro"] = -1;
-                obj["barn_upgrade_time"] = -1;
-
 
                 obj["wheat_level"] = 1;
                 obj["wheat_count"] = 1;
@@ -108,10 +101,8 @@ void register_info::on_pushButton_clicked()
                 obj["alfalfa_upgrade_pro"] = -1;
                 obj["alfalfa_harvesting_pro"] = -1;
 
-
-
-
-
+                obj["barn_upgrade_pro"] = -1;
+                obj["barn_upgrade_time"] = -1;
 
                 obj["silo_upgrade_pro"] = -1;
                 obj["silo_upgrade_time"] = -1;

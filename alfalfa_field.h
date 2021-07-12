@@ -23,6 +23,8 @@ private slots:
 
     void on_btn_harvesting_clicked();
 
+    void on_btn_plow_clicked();
+
 private:
 
     Ui::alfalfa_field *ui;
