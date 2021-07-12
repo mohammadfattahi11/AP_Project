@@ -327,7 +327,7 @@ font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
   <widget class="QSpinBox" name="alfala_spinBox">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>420</x>
      <y>560</y>
      <width>61</width>
      <height>21</height>
@@ -341,7 +341,7 @@ background-color: rgb(255, 190, 85);</string>
   <widget class="QSpinBox" name="wheat_pinBox">
    <property name="geometry">
     <rect>
-     <x>560</x>
+     <x>590</x>
      <y>560</y>
      <width>61</width>
      <height>21</height>
@@ -355,7 +355,7 @@ background-color: rgb(255, 190, 85);</string>
   <widget class="QSpinBox" name="nail_spinBox">
    <property name="geometry">
     <rect>
-     <x>560</x>
+     <x>590</x>
      <y>380</y>
      <width>61</width>
      <height>21</height>
@@ -369,7 +369,7 @@ background-color: rgb(255, 190, 85);</string>
   <widget class="QSpinBox" name="shovel_spinBox">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>430</x>
      <y>380</y>
      <width>61</width>
      <height>21</height>
@@ -383,7 +383,7 @@ background-color: rgb(255, 190, 85);</string>
   <widget class="QSpinBox" name="egg_spinBox">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>280</x>
      <y>380</y>
      <width>61</width>
      <height>21</height>
@@ -397,7 +397,7 @@ background-color: rgb(255, 190, 85);</string>
   <widget class="QSpinBox" name="hen_spinBox">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>120</x>
      <y>380</y>
      <width>61</width>
      <height>21</height>
@@ -411,7 +411,7 @@ background-color: rgb(255, 190, 85);</string>
   <widget class="QSpinBox" name="cow_spinBox">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>120</x>
      <y>190</y>
      <width>61</width>
      <height>21</height>
@@ -425,7 +425,7 @@ background-color: rgb(255, 190, 85);</string>
   <widget class="QSpinBox" name="milk_spinBox">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>280</x>
      <y>190</y>
      <width>61</width>
      <height>21</height>
@@ -439,7 +439,7 @@ background-color: rgb(255, 190, 85);</string>
   <widget class="QSpinBox" name="sheep_spinBox">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>430</x>
      <y>190</y>
      <width>61</width>
      <height>21</height>
@@ -453,7 +453,7 @@ background-color: rgb(255, 190, 85);</string>
   <widget class="QSpinBox" name="wool_spinBox">
    <property name="geometry">
     <rect>
-     <x>560</x>
+     <x>590</x>
      <y>190</y>
      <width>61</width>
      <height>21</height>
@@ -462,6 +462,243 @@ background-color: rgb(255, 190, 85);</string>
    <property name="styleSheet">
     <string notr="true">color: rgb(127, 53, 0);
 background-color: rgb(255, 190, 85);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>0</y>
+     <width>61</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="game_recources.qrc">:/game_backgrounds/pics_project/coin.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="coin_label">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>20</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 238, 3);
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="wool_label">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>190</y>
+     <width>55</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 206, 11);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sheep_label">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>190</y>
+     <width>55</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 206, 11);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="milk_label">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>190</y>
+     <width>55</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 206, 11);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cow_label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>190</y>
+     <width>55</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 206, 11);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hen_label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>380</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 206, 11);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="egg_label">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>380</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 206, 11);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="shovel_label">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>380</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 206, 11);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="nail_label">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>380</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 206, 11);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="wheat_label">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>560</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 206, 11);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="alfalfa_label">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>560</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 206, 11);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
    </property>
   </widget>
  </widget>
