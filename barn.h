@@ -21,6 +21,9 @@ public:
 
     ~barn();
 
+private slots:
+    void on_upgrade_clicked();
+
 private:
 
     Ui::barn *ui;
