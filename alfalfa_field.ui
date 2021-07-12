@@ -266,7 +266,7 @@ background-image: url(:/game_backgrounds/pics_project/clipart244133.png);</strin
     <enum>QAbstractSpinBox::PlusMinus</enum>
    </property>
   </widget>
-  <widget class="QProgressBar" name="progressBar">
+  <widget class="QProgressBar" name="plow_pro">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -290,7 +290,7 @@ background-image: url(:/game_backgrounds/pics_project/clipart244133.png);</strin
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="btn_pro">
    <property name="geometry">
     <rect>
      <x>140</x>

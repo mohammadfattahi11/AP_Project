@@ -4,6 +4,7 @@
 #define ALFALFA_FIELD_H
 
 #include <QDialog>
+#include<QTimer>
 
 namespace Ui {class alfalfa_field;}
 
@@ -24,11 +25,15 @@ private slots:
     void on_btn_harvesting_clicked();
 
     void on_btn_plow_clicked();
+public slots:
+    void increamenter_upgrade();
+    void increamenter_plow();
 
 private:
 
     Ui::alfalfa_field *ui;
     int id;
+    QTimer* timer1 , *timer2 ;
 
 };
 

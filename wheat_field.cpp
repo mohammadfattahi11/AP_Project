@@ -17,9 +17,8 @@ wheat_field::wheat_field(QWidget *parent, int _id) :
     QJsonObject _info = read_info();
     QJsonObject info = (_info["User"].toArray())[id].toObject();
 
-    if(info["wheat_upgrade_time"].toInt() != -1){
+    if(info["wheat_upgrade_time"].toInt() != -1)
         ui->upgrade->setEnabled(false);
-    }
 
     ui->spinBox->setMaximum(5 * pow(2, info["wheat_level"].toInt() - 1));
     ui->label_3->setText(QString::number(5 * pow(2, info["wheat_level"].toInt() - 1)));
@@ -31,10 +30,10 @@ wheat_field::wheat_field(QWidget *parent, int _id) :
      timer1 = new QTimer();
 
 
-      if(info["wheat_upgrade_time"].toInt() != -1)
-        timer1->start(1728000);
+     if(info["wheat_upgrade_time"].toInt() != -1)
+       timer1->start(1728000);
 
-      connect(timer1,SIGNAL(timeout()),this,SLOT(increamenter()));
+     connect(timer1,SIGNAL(timeout()),this,SLOT(increamenter()));
 }
 
 

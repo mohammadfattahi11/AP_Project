@@ -96,10 +96,13 @@ void register_info::on_pushButton_clicked()
                 obj["alfalfa_in_use"] = false;
                 obj["alfalfa_seed_time"] = -1;
                 obj["alfalfa_plow_time"] = -1;
-                obj["alfalfa_is_plow"] = false;
+                obj["alfalfa_plowed"] = false;
                 obj["alfalfa_upgrade_time"] = -1;
                 obj["alfalfa_upgrade_pro"] = -1;
                 obj["alfalfa_seed_pro"] = -1;
+                obj["alfalfa_plow_time"] = -1;
+                obj["alfalfa_plow_pro"] = -1;
+
 
                 obj["barn_upgrade_pro"] = -1;
                 obj["barn_upgrade_time"] = -1;
