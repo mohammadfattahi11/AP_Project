@@ -13,18 +13,18 @@ store::store(QWidget *parent, int _id) :
     ui->setupUi(this);
     QJsonObject _info = read_info();
     QJsonObject info = (_info["User"].toArray())[id].toObject();
-    ui->coin_label->setText(QString::number(info["coin"].toInteger()));
+    ui->coin_label->setText(QString::number(info["coin"].toInt()));
 
-    ui->alfalfa_label->setText(QString::number(info["alfalfa_count"].toInteger()));
-    ui->cow_label->setText(QString::number(info["cow_count"].toInteger()));
-    ui->wheat_label->setText(QString::number(info["wheat_count"].toInteger()));
-    ui->hen_label->setText(QString::number(info["chicken_count"].toInteger()));
-    ui->sheep_label->setText(QString::number(info["sheep_count"].toInteger()));
-    ui->nail_label->setText(QString::number(info["nail_count"].toInteger()));
-    ui->shovel_label->setText(QString::number(info["shovel_count"].toInteger()));
-    ui->wool_label->setText(QString::number(info["fleece_count"].toInteger()));
-    ui->milk_label->setText(QString::number(info["milk_count"].toInteger()));
-    ui->egg_label->setText(QString::number(info["egg_count"].toInteger()));
+    ui->alfalfa_label->setText(QString::number(info["alfalfa_count"].toInt()));
+    ui->cow_label->setText(QString::number(info["cow_count"].toInt()));
+    ui->wheat_label->setText(QString::number(info["wheat_count"].toInt()));
+    ui->hen_label->setText(QString::number(info["chicken_count"].toInt()));
+    ui->sheep_label->setText(QString::number(info["sheep_count"].toInt()));
+    ui->nail_label->setText(QString::number(info["nail_count"].toInt()));
+    ui->shovel_label->setText(QString::number(info["shovel_count"].toInt()));
+    ui->wool_label->setText(QString::number(info["fleece_count"].toInt()));
+    ui->milk_label->setText(QString::number(info["milk_count"].toInt()));
+    ui->egg_label->setText(QString::number(info["egg_count"].toInt()));
 }
 
 store::~store()
@@ -43,7 +43,7 @@ void store::on_sell_pushButton_clicked()
 
 
     cow_num=ui->cow_spinBox->text().toInt();
-    if(cow_num>info["cow_count"].toInteger())
+    if(cow_num>info["cow_count"].toInt())
     {
         QMessageBox::warning(this," ","you don't have enough cow to sell :(");
         return;
@@ -51,7 +51,7 @@ void store::on_sell_pushButton_clicked()
 
 
     hen_num=ui->hen_spinBox->text().toInt();
-    if(hen_num>info["chicken_count"].toInteger())
+    if(hen_num>info["chicken_count"].toInt())
     {
         QMessageBox::warning(this," ","you don't have enough hen to sell :(");
         return;
@@ -59,7 +59,7 @@ void store::on_sell_pushButton_clicked()
 
 
     sheep_num=ui->sheep_spinBox->text().toInt();
-    if(sheep_num>info["sheep_count"].toInteger())
+    if(sheep_num>info["sheep_count"].toInt())
     {
         QMessageBox::warning(this," ","you don't have enough sheep to sell :(");
         return;
@@ -67,7 +67,7 @@ void store::on_sell_pushButton_clicked()
 
 
     nail_num=ui->nail_spinBox->text().toInt();
-    if(nail_num>info["nail_count"].toInteger())
+    if(nail_num>info["nail_count"].toInt())
     {
         QMessageBox::warning(this," ","you don't have enough neil to sell :(");
         return;
@@ -75,7 +75,7 @@ void store::on_sell_pushButton_clicked()
 
 
     milk_num=ui->milk_spinBox->text().toInt();
-    if(milk_num>info["milk_count"].toInteger())
+    if(milk_num>info["milk_count"].toInt())
     {
         QMessageBox::warning(this," ","you don't have enough milk to sell :(");
         return;
@@ -83,7 +83,7 @@ void store::on_sell_pushButton_clicked()
 
 
     egg_num=ui->egg_spinBox->text().toInt();
-    if(egg_num>info["eggs_count"].toInteger())
+    if(egg_num>info["eggs_count"].toInt())
     {
         QMessageBox::warning(this," ","you don't have enough egg to sell :(");
         return;
@@ -91,7 +91,7 @@ void store::on_sell_pushButton_clicked()
 
 
     wheat_num=ui->wheat_pinBox->text().toInt();
-    if(wheat_num>info["wheat_count"].toInteger())
+    if(wheat_num>info["wheat_count"].toInt())
     {
         QMessageBox::warning(this," ","you don't have enough wheat to sell :(");
         return;
@@ -99,7 +99,7 @@ void store::on_sell_pushButton_clicked()
 
 
     alfalfa_num=ui->alfala_spinBox->text().toInt();
-    if(alfalfa_num>info["alfalfa_count"].toInteger())
+    if(alfalfa_num>info["alfalfa_count"].toInt())
     {
         QMessageBox::warning(this," ","you don't have enough alfalfa to sell :(");
         return;
@@ -107,7 +107,7 @@ void store::on_sell_pushButton_clicked()
 
 
     shovel_num=ui->shovel_spinBox->text().toInt();
-    if(shovel_num>info["shovel_count"].toInteger())
+    if(shovel_num>info["shovel_counter"].toInt())
     {
         QMessageBox::warning(this," ","you don't have enough shovel to sell :(");
         return;
@@ -115,39 +115,39 @@ void store::on_sell_pushButton_clicked()
 
 
     wool_num=ui->wool_spinBox->text().toInt();
-    if(wool_num>info["fleece_count"].toInteger())
+    if(wool_num>info["fleece_count"].toInt())
     {
         QMessageBox::warning(this," ","you don't have enough wool to sell :(");
         return;
     }
 
     int reciving_coins=wool_num*23+shovel_num*30+nail_num*20+sheep_num*70+milk_num*12+cow_num*50+egg_num*8+hen_num*15+alfalfa_num*4+wheat_num*2;
-    info["coin"]=info["coin"].toInteger()+reciving_coins;
+    info["coin"]=info["coin"].toInt()+reciving_coins;
 
-    info["fleece_count"]=info["fleece_count"].toInteger()-wool_num;
-    info["shovel_count"]=info["shovel_count"].toInteger()-shovel_num;
-    info["alfalfa_count"]=info["alfalfa_count"].toInteger()-alfalfa_num;
-    info["wheat_count"]=info["wheat_count"].toInteger()-wheat_num;
-    info["eggs_count"]=info["eggs_count"].toInteger()-egg_num;
-    info["milk_count"]=info["milk_count"].toInteger()-milk_num;
-    info["nail_count"]=info["nail_count"].toInteger()-nail_num;
-    info["sheep_count"]=info["sheep_count"].toInteger()-sheep_num;
-    info["cow_count"]=info["cow_count"].toInteger()-cow_num;
-    info["chicken_count"]=info["chicken_count"].toInteger()-hen_num;
+    info["fleece_count"]=info["fleece_count"].toInt()-wool_num;
+    info["shovel_count"]=info["shovel_count"].toInt()-shovel_num;
+    info["alfalfa_count"]=info["alfalfa_count"].toInt()-alfalfa_num;
+    info["wheat_count"]=info["wheat_count"].toInt()-wheat_num;
+    info["eggs_count"]=info["eggs_count"].toInt()-egg_num;
+    info["milk_count"]=info["milk_count"].toInt()-milk_num;
+    info["nail_count"]=info["nail_count"].toInt()-nail_num;
+    info["sheep_count"]=info["sheep_count"].toInt()-sheep_num;
+    info["cow_count"]=info["cow_count"].toInt()-cow_num;
+    info["chicken_count"]=info["chicken_count"].toInt()-hen_num;
 
 
-    ui->coin_label->setText(QString::number(info["coin"].toInteger()));
+    ui->coin_label->setText(QString::number(info["coin"].toInt()));
 
-    ui->alfalfa_label->setText(QString::number(info["alfalfa_count"].toInteger()));
-    ui->cow_label->setText(QString::number(info["cow_count"].toInteger()));
-    ui->wheat_label->setText(QString::number(info["wheat_count"].toInteger()));
-    ui->hen_label->setText(QString::number(info["chicken_count"].toInteger()));
-    ui->sheep_label->setText(QString::number(info["sheep_count"].toInteger()));
-    ui->nail_label->setText(QString::number(info["nail_count"].toInteger()));
-    ui->shovel_label->setText(QString::number(info["shovel_count"].toInteger()));
-    ui->wool_label->setText(QString::number(info["fleece_count"].toInteger()));
-    ui->milk_label->setText(QString::number(info["milk_count"].toInteger()));
-    ui->egg_label->setText(QString::number(info["egg_count"].toInteger()));
+    ui->alfalfa_label->setText(QString::number(info["alfalfa_count"].toInt()));
+    ui->cow_label->setText(QString::number(info["cow_count"].toInt()));
+    ui->wheat_label->setText(QString::number(info["wheat_count"].toInt()));
+    ui->hen_label->setText(QString::number(info["chicken_count"].toInt()));
+    ui->sheep_label->setText(QString::number(info["sheep_count"].toInt()));
+    ui->nail_label->setText(QString::number(info["nail_count"].toInt()));
+    ui->shovel_label->setText(QString::number(info["shovel_count"].toInt()));
+    ui->wool_label->setText(QString::number(info["fleece_count"].toInt()));
+    ui->milk_label->setText(QString::number(info["milk_count"].toInt()));
+    ui->egg_label->setText(QString::number(info["egg_count"].toInt()));
 
 
     ui->alfala_spinBox->setValue(0);
@@ -295,32 +295,32 @@ void store::on_buy_pushButton_clicked()
         QMessageBox::warning(this," ","your money isn't enough :(");
         return;
     }
-    info["coin"]=info["coin"].toInteger()-paying_coins;
+    info["coin"]=info["coin"].toInt()-paying_coins;
 
-    info["fleece_count"]=info["fleece_count"].toInteger()+wool_num;
-    info["shovel_count"]=info["shovel_count"].toInteger()+shovel_num;
-    info["alfalfa_count"]=info["alfalfa_count"].toInteger()+alfalfa_num;
-    info["wheat_count"]=info["wheat_count"].toInteger()+wheat_num;
-    info["eggs_count"]=info["eggs_count"].toInteger()+egg_num;
-    info["milk_count"]=info["milk_count"].toInteger()+milk_num;
-    info["nail_count"]=info["nail_count"].toInteger()+nail_num;
-    info["sheep_count"]=info["sheep_count"].toInteger()+sheep_num;
-    info["cow_count"]=info["cow_count"].toInteger()+cow_num;
-    info["chicken_count"]=info["chicken_count"].toInteger()+hen_num;
+    info["fleece_count"]=info["fleece_count"].toInt()+wool_num;
+    info["shovel_count"]=info["shovel_count"].toInt()+shovel_num;
+    info["alfalfa_count"]=info["alfalfa_count"].toInt()+alfalfa_num;
+    info["wheat_count"]=info["wheat_count"].toInt()+wheat_num;
+    info["eggs_count"]=info["eggs_count"].toInt()+egg_num;
+    info["milk_count"]=info["milk_count"].toInt()+milk_num;
+    info["nail_count"]=info["nail_count"].toInt()+nail_num;
+    info["sheep_count"]=info["sheep_count"].toInt()+sheep_num;
+    info["cow_count"]=info["cow_count"].toInt()+cow_num;
+    info["chicken_count"]=info["chicken_count"].toInt()+hen_num;
 
 
-    ui->coin_label->setText(QString::number(info["coin"].toInteger()));
+    ui->coin_label->setText(QString::number(info["coin"].toInt()));
 
-    ui->alfalfa_label->setText(QString::number(info["alfalfa_count"].toInteger()));
-    ui->cow_label->setText(QString::number(info["cow_count"].toInteger()));
-    ui->wheat_label->setText(QString::number(info["wheat_count"].toInteger()));
-    ui->hen_label->setText(QString::number(info["chicken_count"].toInteger()));
-    ui->sheep_label->setText(QString::number(info["sheep_count"].toInteger()));
-    ui->nail_label->setText(QString::number(info["nail_count"].toInteger()));
-    ui->shovel_label->setText(QString::number(info["shovel_count"].toInteger()));
-    ui->wool_label->setText(QString::number(info["fleece_count"].toInteger()));
-    ui->milk_label->setText(QString::number(info["milk_count"].toInteger()));
-    ui->egg_label->setText(QString::number(info["egg_count"].toInteger()));
+    ui->alfalfa_label->setText(QString::number(info["alfalfa_count"].toInt()));
+    ui->cow_label->setText(QString::number(info["cow_count"].toInt()));
+    ui->wheat_label->setText(QString::number(info["wheat_count"].toInt()));
+    ui->hen_label->setText(QString::number(info["chicken_count"].toInt()));
+    ui->sheep_label->setText(QString::number(info["sheep_count"].toInt()));
+    ui->nail_label->setText(QString::number(info["nail_count"].toInt()));
+    ui->shovel_label->setText(QString::number(info["shovel_count"].toInt()));
+    ui->wool_label->setText(QString::number(info["fleece_count"].toInt()));
+    ui->milk_label->setText(QString::number(info["milk_count"].toInt()));
+    ui->egg_label->setText(QString::number(info["egg_count"].toInt()));
 
 
     ui->alfala_spinBox->setValue(0);

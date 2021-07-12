@@ -26,6 +26,9 @@ void silo::on_upgrade_clicked()
 {
     QJsonObject _info = read_info();
     QJsonObject info = (_info["User"].toArray())[id].toObject();
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this," ","Are you sure? you want to upgrade?", QMessageBox::Yes | QMessageBox::No);
+    if(reply == QMessageBox::Yes){
          if((info["silo_level"].toInt() + 1 )>=info["level_palyer"].toInt())
             QMessageBox::warning(this , " " ," ");
 else{
@@ -45,4 +48,4 @@ info["nail_count"]=QJsonValue(info["nail_count"].toInt()-2*info["silo_level"].to
 }
 }
 }
-
+}
