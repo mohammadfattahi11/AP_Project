@@ -12,25 +12,16 @@ class silo : public QDialog
     Q_OBJECT
 
 public:
-    explicit silo(QWidget *parent = nullptr);
-//    silo(const silo&);
-//    void operator=(const silo&);
+    explicit silo(QWidget *parent = nullptr, int = 0);
+
     ~silo();
 
-//    int get_Level();
-//    int get_Capacity();
-//    int get_Wheats_count();
-//    //////
-//    void set_Level(int );
-//    void set_Capacity(int );
-//    void set_Wheats_count(int );
+
 
 private:
 
     Ui::silo *ui;
-//    int Level;
-//    int Capacity;
-//    int Wheats_count;
+    int id;
 
 };
 

@@ -6,6 +6,7 @@
 #include<QMessageBox>
 #include<ctime>
 #include<time.h>
+#include<cmath>
 
 chicken_coop::chicken_coop(QWidget *parent , int _id) :
     QDialog(parent),
@@ -13,11 +14,13 @@ chicken_coop::chicken_coop(QWidget *parent , int _id) :
 {
     ui->setupUi(this);
     id = _id;
+    QJsonObject _info = read_info();
+    QJsonObject info = (_info["User"].toArray())[id].toObject();
+     ui->setupUi(this);
+     ui->count->setText(QString::number(info["chicken_count"].toInt()));
+     ui->capacity->setText(QString::number( pow(2,info["chicken_level"].toInt())));
+     ui->level->setText(QString::number(info["chicken_level"].toInt()));
 }
-chicken_coop::chicken_coop(const chicken_coop& _chicken_coop){
-
-}
-void chicken_coop::operator=(const chicken_coop& _chicken_coop){}
 chicken_coop::~chicken_coop()
 {
     delete ui;
@@ -54,21 +57,23 @@ void chicken_coop::on_feed_clicked()
 }
 
 
-void chicken_coop::on_claim_eggs_clicked()
+void chicken_coop::on_collect_eggs_clicked()
 {
     QJsonObject _info = read_info();
     QJsonObject info = (_info["User"].toArray())[id].toObject();
      time_t _time = time(NULL);
      if( (_time -  info["chicken_feed_time"].toInt()) >=20) //172800 )
      {
+       if(ceil(5*pow(1.5,info["barn_level"].toInt()-1))<info["nail_count"].toInt()+info["shovel_count"].toInt()+info["alfalfa_count"].toInt()+info["eggs_count"].toInt()+info["milk_count"].toInt()+info["fleece_count"].toInt() + info["chicken_count"].toInt())//chicken count for added eggs number)
+           QMessageBox::warning(this , " " ,"");
+           else{
          info["eggs_count"] = QJsonValue(info["eggs_count"] .toInt() + info["chicken_count"].toInt());
           info["chicken_feed_time"] = -1;
-
-
          QJsonArray info_2 = _info["User"].toArray();
             info_2[id] = QJsonValue(info);
             _info["User"] = info_2;
              write_info(_info);
+     }
      }
      else
            QMessageBox::warning(this , " " ," ");
@@ -83,8 +88,6 @@ void chicken_coop::on_upgrade_clicked()
     if(info["nail_count"].toInt()  < 1 || info["coin"].toInt() < 10 || info["level_palyer"].toInt() < 3 || info["level_palyer"].toInt() < info["chicken_level"].toInt() + 1 )
         QMessageBox::warning(this , " " ," ");
     else{
-         info["chicken_level"] = QJsonValue(info["chicken_level"] .toInt() + 1);
-         info["exp"] = QJsonValue(info["exp"].toInt() + 5);
          info["nail_count"] = QJsonValue (info["nail_count"].toInt() - 1 );
          info["coin"] = QJsonValue (info["coin"].toInt() - 10 );
          time_t _time = time(NULL);
@@ -95,4 +98,3 @@ void chicken_coop::on_upgrade_clicked()
              write_info(_info);
     }
 }
-
